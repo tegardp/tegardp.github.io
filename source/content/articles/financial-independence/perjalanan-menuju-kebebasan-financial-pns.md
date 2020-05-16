@@ -13,11 +13,11 @@ Summary: Perjalanan menuju kebebasan financial memang banyak lika-liku, butuh pe
 
 Perjalanan menuju kebebasan financial memang banyak lika-liku, butuh perjuangan besar. Karena saya adalah PNS, kali ini saya akan membahas cara menuju kebebasan finansial berdasarkan pengalaman pribadi.
 
-## **Buat Rencana Keuangan**
+# **Buat Rencana Keuangan**
 
-## **Buat Dana Darurat (Emergency fund)**
+# **Buat Dana Darurat (Emergency fund)**
 
-## **Tabung Gajimu!**
+# **Tabung Gajimu!**
 
 <p align="center">
   <img src="https://www.moneytalks.co.nz/wp-content/uploads/2019/02/Save-when-money-is-tight.png" alt="https://www.moneytalks.co.nz/wp-content/uploads/2019/02/Save-when-money-is-tight.png">
@@ -26,8 +26,10 @@ Perjalanan menuju kebebasan financial memang banyak lika-liku, butuh perjuangan 
 Begitu bulan berganti, sampailah kita pada tanggal 1, yaitu tanggal gajian yeyy.. eits tahan dulu, jangan dibuat belanja dulu! 
 
 
-## **Jangan Berhutang Riba
+# **Jangan Berhutang Riba
+  
+# **Segera Lunasi Hutangmu!**
 
-## **Lunasi Hutangmu!**
+# **Tambah sumber penghasilan**
 
-## **Pekerjakaan uangmu**
+# **Tambah sumber penghasilan**
