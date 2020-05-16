@@ -9,6 +9,11 @@ Hello, I'm Tegar Dani Pratama, I have been working as a Data Scientist and Web d
 
 This is my data science portfolio. enjoy!
 
+## Web Development
+* **Django: Monitoring Survei Activity**
+Application to monitor progress of a survey, how many sample are completed, which surveyor that hasn't do their job. When's due date. etc
+[demo](simona-ubinan.herokuapp.com)
+
 ## Data Cleaning
 
 * **Data Cleaning on Rotten Tomatoes Movie Reivews Datasets:**
