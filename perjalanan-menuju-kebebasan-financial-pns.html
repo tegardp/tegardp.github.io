@@ -81,77 +81,17 @@
 </p>
 
 <p>Perjalanan menuju kebebasan financial memang banyak lika-liku, butuh perjuangan besar. Karena saya adalah PNS, kali ini saya akan membahas cara menuju kebebasan finansial berdasarkan pengalaman pribadi.</p>
+<h2><strong>Buat Rencana Keuangan</strong></h2>
+<h2><strong>Buat Dana Darurat (Emergency fund)</strong></h2>
 <h2><strong>Tabung Gajimu!</strong></h2>
 <p align="center">
   <img src="https://www.moneytalks.co.nz/wp-content/uploads/2019/02/Save-when-money-is-tight.png" alt="https://www.moneytalks.co.nz/wp-content/uploads/2019/02/Save-when-money-is-tight.png">
 </p>
 
-<ol>
-<li>
-<p><strong><em>Accuracy</em></strong></p>
-<p>metrics paling umum yang biasa digunakan untuk mengukur sebuah model. Bisa digunakan untuk klasifikasi biner class maupun multi-class.</p>
-<p>Accuracy = (TP+TN) / (TP+TN+FP+FN)</p>
-<p><strong><em>Accuracy</em></strong> adalah proporsi dari prediksi yang benar dibandingkan dengan total prediksi.</p>
-<p><strong>Kapan digunakan?</strong></p>
-<p><em>Accuracy</em> <strong>cocok</strong> untuk menilai data yang memiliki <strong>class yang seimbang</strong>. Namun tidak berarti apabila classnya tidak seimbang.</p>
-<p><strong>Notes:</strong></p>
-<p>Apabila kita ingin meneliti kasus yang <strong>sangat jarang</strong>. Seperti, kita ingin memprediksi bahwa berapa jumlah penumpang pesawat yang merupakan <strong>teroris</strong>. Model bisa saja memberi label "Tidak ada" untuk semua test. Setelah di test hasilnya adalah akurasi dari prediksi mencapai 99%. Model tersebut akurat namun tidak valuable.</p>
-</li>
-<li>
-<p><strong><em>Precision</em></strong></p>
-<p>Singkatnya, presisi adalah seberapa besar <strong>proporsi prediksi positif</strong> yang <strong>benar</strong></p>
-<p><em>Precision</em> = TP / (TP+FP)</p>
-<p>Pada penelitian prediksi teroris sebelumnya apabila model tidak dapat memprediksi True Positive. Maka, nilai <em>precision</em> juga 0.</p>
-<p><strong>Kapan digunakan?</strong></p>
-<p><em>Precision</em> digunakan untuk meyakinkan peneliti dari hasil prediksi yang didapatkan.</p>
-</li>
-<li>
-<p><strong><em>Recall</em></strong></p>
-<p>Singkatnya, <em>recall</em> adalah seberapa besar presentase model <strong>mendapatkan prediksi positif</strong> dari <strong>total positif seharusnya</strong></p>
-<p><em>Recall</em> = TP / (TP+FN)</p>
-<p>Pada penelitian prediksi teroris sebelumnya apabila model tidak dapat memprediksi True Positive. Maka, nilai recall juga 0.</p>
-<p><strong>Kapan digunakan?</strong></p>
-<p><em>Precision</em> digunakan untuk melihat seberapa besar kemampuan model untuk menemukan TP.</p>
-<p><strong>Notes:</strong></p>
-<p>Apabila <strong>semua</strong> penumpang kita beri <strong>label teroris</strong>, maka nilai <strong>recall adalah 1.0</strong>. namun nilai <strong>precision adalah 0</strong>. Hal ini biasa disebut <strong>tradeoff of precision vs recall</strong>. make perlu menggunakan nilai F1-Score untuk mendapatkan keseimbangan antara keduanya.</p>
-</li>
-</ol>
-<h2><strong>B. F1 Score</strong></h2>
-<p>F1-Score adalah metrics yang digunakan jika ingin melihat <strong>keseimbangan</strong> antara <strong><em>precise</em></strong> dan <strong><em>recall</em></strong>. Dapat digunakan di klasifikasi biner maupun multi-class</p>
-<p>F1-Score = 2 x (Precision x Recall) / (Precision + Recall)</p>
-<h2><strong>C. Log Loss/Binary Crossentropy</strong></h2>
-<p><p align="center">
-    <img src="https://miro.medium.com/max/556/0*8oDE1l2eWLw81clR.png">
-  </p></p>
-<p><strong><em>Log loss</em></strong> sangat cocok digunakan untuk <strong>mengukur klasifikasi biner</strong>. </p>
-<p>Log loss = -(y log(p) + (1-y) log(1-p))</p>
-<p><strong>Kapan digunakan?</strong></p>
-<p>Ketika output dari <strong>klasifikasi adalah peluang</strong>. Semakin kecil log loss maka akurasinya semakin tinggi</p>
-<p><strong>Notes:</strong></p>
-<p>Rentan terhadap kelas yang tidak seimbang.</p>
-<h2><strong>D. Categorical Crossentropy</strong></h2>
-<p><strong><em>Categorical Crossentropy</em></strong> digunakan untuk mengukur multi-class.</p>
-<p><p align="center">
-    <img src="https://miro.medium.com/max/344/0*zneWdU4GN_WBzTIF.gif">
-  </p></p>
-<p>y_ij bernilai 1 apabila sample i tergolong kelas j, dan 0 untuk yang lain
-  p_ij peluang dari model dalam memprediksi sample i tergolong kelas j.</p>
-<p><strong>Kapan digunakan?</strong></p>
-<p>Ketika output dari <strong>klasifikasi adalah peluang multi-class</strong>. Biasa digunakan pada <em>Neural Nets</em>. Semakin kecil nilai <em>categorical loss</em> semakin tinggi akurasi.</p>
-<p><strong>Notes:</strong></p>
-<p>Rentan terhadap kelas yang tidak seimbang.</p>
-<h2><strong>E. AUC (<em>Area Under the ROC Curve.</em>)</strong></h2>
-<p><p align="center">
-    <img src="https://miro.medium.com/max/875/0*Dkq9YLJM5t8k0Fcb">
-  </p></p>
-<p>Sensitivty = TPR(True Positive Rate)= Recall = TP/(TP+FP)</p>
-<p>Specificity = FPR(False Positive Rate)= FP/(TN+FP)</p>
-<p><strong>AUC</strong> mengukur <strong>seberapa baik peluang mengidentifikasikan TP dari seluruh nilai Positif</strong></p>
-<p>Nilai <strong>treshold</strong> dari AUC <strong>tergantung dari tujuan penelitian</strong>. Jika ingin mengidentifikasikan kanker nilai treshold 0,5 sudah dianggap terlalu tinggi. Misalnya seorang pasien hanya memiliki peluang sebesar 0,3 terkena kanker, sebaiknya orang tersebut diklasifikasikan sebagai positif kanker.</p>
-<p><strong>Kapan digunakan?</strong></p>
-<p>AUC menilai <strong>ranking dari nilai prediksi</strong>. Cocok apabila seseorang ingin mendapatkan <strong>daftar user</strong> yang akan merespon sebuah kejadian bisa dilihat dari nilai AUC dari terbesar hingga terendah.</p>
-<h2>Kesimpulan</h2>
-<p>Seperti yang telah dijelaskan di awal, bahwa metrics yang digunakan tergantung dari <strong>tujuan penelitian</strong>. Pemilihan metric yang <strong>salah</strong> bisa menyebabkan hasil yang <strong>fatal</strong></p>
+<p>Begitu bulan berganti, sampailah kita pada tanggal 1, yaitu tanggal gajian yeyy.. eits tahan dulu, jangan dibuat belanja dulu! </p>
+<h2>**Jangan Berhutang Riba</h2>
+<h2><strong>Lunasi Hutangmu!</strong></h2>
+<h2><strong>Pekerjakaan uangmu</strong></h2>
 
 
              
