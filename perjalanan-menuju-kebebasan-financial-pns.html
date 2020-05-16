@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="tegardp" />
+
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="financial-independence, financial, " />
+
+<meta property="og:title" content="Perjalanan Menuju Kebebasan Financial PNS (Financial Independence) "/>
+<meta property="og:url" content="/perjalanan-menuju-kebebasan-financial-pns.html" />
+<meta property="og:description" content="Perjalanan menuju kebebasan financial memang banyak lika-liku, butuh perjuangan besar. Di artikel ini saya akan membahas kiat-kiat menuju kebebasan finansial." />
+<meta property="og:site_name" content="Tegar Dani&#39;s Blog" />
+<meta property="og:article:author" content="tegardp" />
+<meta property="og:article:published_time" content="2020-05-16T17:38:00+09:00" />
+<meta property="og:article:modified_time" content="2020-05-16T17:38:00+09:00" />
+<meta name="twitter:title" content="Perjalanan Menuju Kebebasan Financial PNS (Financial Independence) ">
+<meta name="twitter:description" content="Perjalanan menuju kebebasan financial memang banyak lika-liku, butuh perjuangan besar. Di artikel ini saya akan membahas kiat-kiat menuju kebebasan finansial.">
+
+        <title>Perjalanan Menuju Kebebasan Financial PNS (Financial Independence)  · Tegar Dani&#39;s Blog
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/theme/css/elegant.prod.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
+
+
+
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="/"><span class=site-name>Tegar Dani's Blog</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       "/"
+                                    >Home</a>
+                                </li>
+                                <li ><a href="/pages/portfolio/">Portfolio</a></li>
+                                <li ><a href="/categories.html">Categories</a></li>
+                                <li ><a href="/tags.html">Tags</a></li>
+                                <li ><a href="/archives.html">Archives</a></li>
+                                <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="/perjalanan-menuju-kebebasan-financial-pns.html">
+                Perjalanan Menuju Kebebasan Financial PNS (Financial Independence)
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+            
+            <p align="center">
+  <img src="https://www.mememaker.net/api/bucket?path=static/img/memes/full/2019/Feb/14/9/more-metrics-you-say-16456.png" alt="https://www.mememaker.net/meme/more-metrics-you-say-16456">
+</p>
+
+<p>Pada kali ini saya ingin menulis tentang metrics yang biasa digunakan oleh Data Scientist untuk mengukur keakuratan dari model klasifikasi. </p>
+<p>Kalau ada yang mengatakan bahwa "Indonesia adalah negara terhebat se-Asia Tenggara". Maka pertanyaan pertama yang muncul biasanya adalah: apa sih tolak ukurnya? apakah dari segi ekonomi? fasilitas kesehatan? atau yang lainnya?</p>
+<p>Machine learning (ML) pun demikian. Pada dasarnya ML adalah menemukan solusi dengan cara yang berbeda dan dataset yang berbeda. Maka dari itu penting untuk mengetahui tujuan awal sebelum memilih metrics.</p>
+<h2><strong>A. Accuracy, Precision, Recall</strong></h2>
+<p align="center">
+  <img src="https://blog.aimultiple.com/wp-content/uploads/2019/07/positive-negative-true-false-matrix.png" alt="https://blog.aimultiple.com/wp-content/uploads/2019/07/positive-negative-true-false-matrix.png">
+</p>
+
+<ol>
+<li>
+<p><strong><em>Accuracy</em></strong></p>
+<p>metrics paling umum yang biasa digunakan untuk mengukur sebuah model. Bisa digunakan untuk klasifikasi biner class maupun multi-class.</p>
+<p>Accuracy = (TP+TN) / (TP+TN+FP+FN)</p>
+<p><strong><em>Accuracy</em></strong> adalah proporsi dari prediksi yang benar dibandingkan dengan total prediksi.</p>
+<p><strong>Kapan digunakan?</strong></p>
+<p><em>Accuracy</em> <strong>cocok</strong> untuk menilai data yang memiliki <strong>class yang seimbang</strong>. Namun tidak berarti apabila classnya tidak seimbang.</p>
+<p><strong>Notes:</strong></p>
+<p>Apabila kita ingin meneliti kasus yang <strong>sangat jarang</strong>. Seperti, kita ingin memprediksi bahwa berapa jumlah penumpang pesawat yang merupakan <strong>teroris</strong>. Model bisa saja memberi label "Tidak ada" untuk semua test. Setelah di test hasilnya adalah akurasi dari prediksi mencapai 99%. Model tersebut akurat namun tidak valuable.</p>
+</li>
+<li>
+<p><strong><em>Precision</em></strong></p>
+<p>Singkatnya, presisi adalah seberapa besar <strong>proporsi prediksi positif</strong> yang <strong>benar</strong></p>
+<p><em>Precision</em> = TP / (TP+FP)</p>
+<p>Pada penelitian prediksi teroris sebelumnya apabila model tidak dapat memprediksi True Positive. Maka, nilai <em>precision</em> juga 0.</p>
+<p><strong>Kapan digunakan?</strong></p>
+<p><em>Precision</em> digunakan untuk meyakinkan peneliti dari hasil prediksi yang didapatkan.</p>
+</li>
+<li>
+<p><strong><em>Recall</em></strong></p>
+<p>Singkatnya, <em>recall</em> adalah seberapa besar presentase model <strong>mendapatkan prediksi positif</strong> dari <strong>total positif seharusnya</strong></p>
+<p><em>Recall</em> = TP / (TP+FN)</p>
+<p>Pada penelitian prediksi teroris sebelumnya apabila model tidak dapat memprediksi True Positive. Maka, nilai recall juga 0.</p>
+<p><strong>Kapan digunakan?</strong></p>
+<p><em>Precision</em> digunakan untuk melihat seberapa besar kemampuan model untuk menemukan TP.</p>
+<p><strong>Notes:</strong></p>
+<p>Apabila <strong>semua</strong> penumpang kita beri <strong>label teroris</strong>, maka nilai <strong>recall adalah 1.0</strong>. namun nilai <strong>precision adalah 0</strong>. Hal ini biasa disebut <strong>tradeoff of precision vs recall</strong>. make perlu menggunakan nilai F1-Score untuk mendapatkan keseimbangan antara keduanya.</p>
+</li>
+</ol>
+<h2><strong>B. F1 Score</strong></h2>
+<p>F1-Score adalah metrics yang digunakan jika ingin melihat <strong>keseimbangan</strong> antara <strong><em>precise</em></strong> dan <strong><em>recall</em></strong>. Dapat digunakan di klasifikasi biner maupun multi-class</p>
+<p>F1-Score = 2 x (Precision x Recall) / (Precision + Recall)</p>
+<h2><strong>C. Log Loss/Binary Crossentropy</strong></h2>
+<p><p align="center">
+    <img src="https://miro.medium.com/max/556/0*8oDE1l2eWLw81clR.png">
+  </p></p>
+<p><strong><em>Log loss</em></strong> sangat cocok digunakan untuk <strong>mengukur klasifikasi biner</strong>. </p>
+<p>Log loss = -(y log(p) + (1-y) log(1-p))</p>
+<p><strong>Kapan digunakan?</strong></p>
+<p>Ketika output dari <strong>klasifikasi adalah peluang</strong>. Semakin kecil log loss maka akurasinya semakin tinggi</p>
+<p><strong>Notes:</strong></p>
+<p>Rentan terhadap kelas yang tidak seimbang.</p>
+<h2><strong>D. Categorical Crossentropy</strong></h2>
+<p><strong><em>Categorical Crossentropy</em></strong> digunakan untuk mengukur multi-class.</p>
+<p><p align="center">
+    <img src="https://miro.medium.com/max/344/0*zneWdU4GN_WBzTIF.gif">
+  </p></p>
+<p>y_ij bernilai 1 apabila sample i tergolong kelas j, dan 0 untuk yang lain
+  p_ij peluang dari model dalam memprediksi sample i tergolong kelas j.</p>
+<p><strong>Kapan digunakan?</strong></p>
+<p>Ketika output dari <strong>klasifikasi adalah peluang multi-class</strong>. Biasa digunakan pada <em>Neural Nets</em>. Semakin kecil nilai <em>categorical loss</em> semakin tinggi akurasi.</p>
+<p><strong>Notes:</strong></p>
+<p>Rentan terhadap kelas yang tidak seimbang.</p>
+<h2><strong>E. AUC (<em>Area Under the ROC Curve.</em>)</strong></h2>
+<p><p align="center">
+    <img src="https://miro.medium.com/max/875/0*Dkq9YLJM5t8k0Fcb">
+  </p></p>
+<p>Sensitivty = TPR(True Positive Rate)= Recall = TP/(TP+FP)</p>
+<p>Specificity = FPR(False Positive Rate)= FP/(TN+FP)</p>
+<p><strong>AUC</strong> mengukur <strong>seberapa baik peluang mengidentifikasikan TP dari seluruh nilai Positif</strong></p>
+<p>Nilai <strong>treshold</strong> dari AUC <strong>tergantung dari tujuan penelitian</strong>. Jika ingin mengidentifikasikan kanker nilai treshold 0,5 sudah dianggap terlalu tinggi. Misalnya seorang pasien hanya memiliki peluang sebesar 0,3 terkena kanker, sebaiknya orang tersebut diklasifikasikan sebagai positif kanker.</p>
+<p><strong>Kapan digunakan?</strong></p>
+<p>AUC menilai <strong>ranking dari nilai prediksi</strong>. Cocok apabila seseorang ingin mendapatkan <strong>daftar user</strong> yang akan merespon sebuah kejadian bisa dilihat dari nilai AUC dari terbesar hingga terendah.</p>
+<h2>Kesimpulan</h2>
+<p>Seperti yang telah dijelaskan di awal, bahwa metrics yang digunakan tergantung dari <strong>tujuan penelitian</strong>. Pemilihan metric yang <strong>salah</strong> bisa menyebabkan hasil yang <strong>fatal</strong></p>
+
+
+             
+ 
+            
+            
+            
+
+
+
+
+
+
+            <hr/>
+        </div>
+        <section id="article-sidebar" class="span2">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2020-05-16T17:38:00+09:00">May 16, 2020</time>
+
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#financial-ref">financial</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="/tags.html#financial-independence-ref">financial-independence
+                    <span>1</span>
+</a></li>
+            </ul>
+<h4>Contact</h4>
+<div id="sidebar-social-link">
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>
