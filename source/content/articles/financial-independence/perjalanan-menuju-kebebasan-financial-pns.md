@@ -30,6 +30,10 @@ Kemudian saya harus menyiapkan dana pendidikan sejak anak saya lahir. Supaya ket
 
 # **Buat Dana Darurat (Emergency fund)**
 
+<p align="center">
+  <img src="https://yourmoneyline.com/wp-content/uploads/2019/11/emergency-fund.jpg" alt="https://yourmoneyline.com/wp-content/uploads/2019/11/emergency-fund.jpg">
+</p>
+
 Dana darurat sangat-sangat penting. Karena dana ini bisa membuat hari-harimu lebih tenang dan membuatmu bernafas lega ketika terjadi suatu hal yang tidak terduga!
 
 Seperti namanya, dana darurat hanya digunakan saat untuk sesuatu yang mendesak. Seperti: memperbaiki motor/mobil yang tiba-tiba rusak, menjenguk teman sakit, keluarga dan saudara yang meminta bantuan, dan lain-lain. 
