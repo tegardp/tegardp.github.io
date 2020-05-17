@@ -1,4 +1,4 @@
-Title: Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema
+Title: Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican
 Date: 2020-5-17 16:10
 Modified: 2020-5-17 16:10
 Category: python
@@ -186,7 +186,7 @@ Pada artikel ini kita belajar bagaimana cara menginstall pelican dan generate st
 ## Series
 Artikel ini adalah bagian dari seri tutorial bagaimana membuat blog menggunakan pelican dan Python
 
-[Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema]()
+[Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican]({filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-1.md)
 [Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat Konten]()
 [Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Luncurkan di Github Pages]()
 [Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Google Domain]()

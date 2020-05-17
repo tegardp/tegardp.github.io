@@ -57,9 +57,10 @@ Semakin besar nilai dana darurat maka kamu akan lebih lega dan siap untuk mengha
 Setelah kamu memiliki dana darurat. Buatlah goal jangka panjang kamu. Apakah kamu Ingin menikah, punya rumah, mobil, pensiun tenang. Tulis semuanya dan jangan lupa tulis nilainya.
 
 Banyak template jumlah tabungan yang bisa kamu gunakan di antaranya adalah 
+
 * 50% gaji untuk kebutuhan, 30% gaji untuk ditabung, 20% gaji untuk keinginan; 
 * 50% ditabung, 30% kebutuhan, 20% keinginan; 
-* bahkan ada yang lebih ekstrim 70% ditabung dan 30% kebutuhan.
+* bahkan ada yang hingga 70% ditabung dan 30% kebutuhan.
 
 Pilih sesuai dengan goal dan jangka waktu targetmu. Jika tabunganmu adalah target jangka panjang maka ubahlah jadi emas untuk menjaga nilai uang tersebut agar tidak tergerus inflasi.
 
