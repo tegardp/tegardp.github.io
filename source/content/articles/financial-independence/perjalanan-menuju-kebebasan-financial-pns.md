@@ -15,18 +15,17 @@ Perjalanan menuju kebebasan finansial memang banyak lika-liku, sangat membutuhka
 
 # **Buat Rencana Keuangan (Budgetting)**
 
+<p align="center">
+  <img src="https://i.imgur.com/bTOFQ9k.png" alt="https://i.imgur.com/bTOFQ9k.png">
+</p>
+
 Hal yang paling pertama kali harus kamu lakukan adalah membuat rencana keuangan. Tulislah mulai dari seberapa besar kewajiban yang harus kamu bayar tiap bulan, berapa jumlah uang yang harus kamu tabung, serta cicilan yang harus kamu bayar tiap bulan. Buatlah sedetail mungkin.
 
-Di bawah ini adalah contoh rencana keuangan milik saya tiap bulannya. Saya buat dengan menggunakan MS. Excel.
+Tabel di atas adalah contoh rencana keuangan milik saya tiap bulannya. Saya buat dengan menggunakan MS. Excel.
 
 Saya adalah seorang pria usia 25 tahun sudah menikah dan punya anak 1 usia 1 tahun. saya menargetkan menabung minimal 50% dari pendapatan saya tiap bulannya
 
 Kemudian saya harus menyiapkan dana pendidikan sejak anak saya lahir. Supaya ketika memasuki usia sekolah/kuliah, saya tidak perlu bingung cari uang ataupun hutang.
-
-
-<p align="center">
-  <img src="https://i.imgur.com/bTOFQ9k.png" alt="https://i.imgur.com/bTOFQ9k.png">
-</p>
 
 # **Buat Dana Darurat (Emergency fund)**
 
