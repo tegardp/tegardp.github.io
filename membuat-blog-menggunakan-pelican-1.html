@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="tegardp" />
+
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="python, pelican, python, " />
+
+<meta property="og:title" content="Membuat Blog Menggunakan Pelican - Instalasi dan Tema "/>
+<meta property="og:url" content="/membuat-blog-menggunakan-pelican-1.html" />
+<meta property="og:description" content="Panduan membuat blog statis menggunakan Pelican" />
+<meta property="og:site_name" content="Tegar Dani&#39;s Blog" />
+<meta property="og:article:author" content="tegardp" />
+<meta property="og:article:published_time" content="2020-05-17T16:10:00+09:00" />
+<meta property="og:article:modified_time" content="2020-05-17T16:10:00+09:00" />
+<meta name="twitter:title" content="Membuat Blog Menggunakan Pelican - Instalasi dan Tema ">
+<meta name="twitter:description" content="Panduan membuat blog statis menggunakan Pelican">
+
+        <title>Membuat Blog Menggunakan Pelican - Instalasi dan Tema  · Tegar Dani&#39;s Blog
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/theme/css/elegant.prod.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
+
+
+
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="/"><span class=site-name>Tegar Dani's Blog</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       "/"
+                                    >Home</a>
+                                </li>
+                                <li ><a href="/pages/portfolio/">Portfolio</a></li>
+                                <li ><a href="/categories.html">Categories</a></li>
+                                <li ><a href="/tags.html">Tags</a></li>
+                                <li ><a href="/archives.html">Archives</a></li>
+                                <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="/membuat-blog-menggunakan-pelican-1.html">
+                Membuat Blog Menggunakan Pelican - Instalasi dan Tema
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+            
+            <p>Membuat web statis sendiri memiliki keunggulan dibandingkan tradisional web yang menggunakan database untuk menyimpan konten.
+* Statis web lebih cepat dibandingkan tradisional web
+* Hosting lebih murah karena tidak menggunakan database. Bahkan gratis apabila anda menggunakan github</p>
+<p>Tutorial ini akan memandu kamu untuk membuat blog mu sendiri. Mulai dari menginstall Pelican hingga menunggahnya di Github (gratis)</p>
+<h2>Prasyarat</h2>
+<ul>
+<li>Memiliki pengetahuan python dasar</li>
+<li>Memiliki pengetahuan mengenai HTML &amp; CSS</li>
+</ul>
+<h2>Goal</h2>
+<ul>
+<li>Install pelican</li>
+<li>Generate static website</li>
+<li>Menginstall Tema: Elegant</li>
+</ul>
+<h2>Install Python</h2>
+<p>Pertama install python terlebih dahulu. Kamu bisa mengunduhnya <a href="https://www.python.org/downloads/">di sini</a>.</p>
+<h2>Manajemen Folder</h2>
+<p>Selanjutnya buat folder bernama <code>blog</code>. Kemudian buat dua folder di dalamnya bernama <code>output</code> dan <code>source</code>.</p>
+<div class="highlight"><pre><span></span><span class="err">blog</span>
+<span class="err">  └── output</span>
+<span class="err">  └── source</span>
+</pre></div>
+
+
+<h2>Install Virtualenv</h2>
+<p>Virtualenv adalah tool yang digunakan untuk membuat suatu Python Environment yang terisolasi. Keuntungannya adalah komponen yang anda tambahkan atau hapus di environment ini tidak akan mempengaruhi environment lain. Begitupula apabila anda menghapus komponen yang sama di environment lain. Maka environment ini akan tetap aman terjaga.</p>
+<p>Instalasi virtualenv menggunakan perintah di bawah ini</p>
+<div class="highlight"><pre><span></span><span class="err">pip install virtualenv</span>
+</pre></div>
+
+
+<p>Selanjutnya kita akan membuat environment di dalam folder blog.</p>
+<div class="highlight"><pre><span></span><span class="err">cd blog</span>
+<span class="err">venv env</span>
+</pre></div>
+
+
+<p>maka kontent folder blog akan menjadi seperti ini</p>
+<div class="highlight"><pre><span></span><span class="err">blog</span>
+<span class="err">  └── env</span>
+<span class="err">  └── output</span>
+<span class="err">  └── source</span>
+</pre></div>
+
+
+<p>Untuk mengaktifkan virtual environment pada platform macOS dan Linux gunakan:</p>
+<div class="highlight"><pre><span></span><span class="err">source env/bin/activate</span>
+</pre></div>
+
+
+<p>Pada Windows</p>
+<div class="highlight"><pre><span></span><span class="err">.\env\Scripts\activate</span>
+</pre></div>
+
+
+<p>Setelah selesai digunakan kamu bisa mematikan virtual environment menggunakan perintah:</p>
+<div class="highlight"><pre><span></span><span class="err">deactivate</span>
+</pre></div>
+
+
+<h2>Install Pelican</h2>
+<p>Pastikan virtual environment dalam kondisi aktif. Kemudian install komponen yang dibutuhkan</p>
+<div class="highlight"><pre><span></span><span class="err">pip install pelican</span>
+<span class="err">pip install markdown</span>
+</pre></div>
+
+
+<p>Setelah menginstall komponen anda perlu menginstall pelican ke dalam folder <code>source</code>.</p>
+<div class="highlight"><pre><span></span><span class="err">cd source</span>
+<span class="err">pelican-quickstart</span>
+</pre></div>
+
+
+<p>Pelican akan memunculkan pertanyaan instalasi website</p>
+<div class="highlight"><pre><span></span><span class="k">Where</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"> </span><span class="o">[</span><span class="n">.</span><span class="o">]</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="n">What</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"> </span><span class="n">Tegar</span><span class="w"> </span><span class="n">Dani</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">Blog</span><span class="w"></span>
+<span class="n">Who</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">author</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"> </span><span class="n">Tegardp</span><span class="w"></span>
+<span class="n">What</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="k">language</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"> </span><span class="o">[</span><span class="n">English</span><span class="o">]</span><span class="w"> </span><span class="n">en</span><span class="w"></span>
+<span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">URL</span><span class="w"> </span><span class="k">prefix</span><span class="vm">?</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.,</span><span class="w"> </span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="w">   </span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="n">n</span><span class="w"></span>
+<span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">enable</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="n">pagination</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="n">n</span><span class="w"></span>
+<span class="n">What</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="nc">time</span><span class="w"> </span><span class="k">zone</span><span class="vm">?</span><span class="w"> </span><span class="o">[</span><span class="n">Europe/Paris</span><span class="o">]</span><span class="w"> </span><span class="n">Asia</span><span class="o">/</span><span class="n">Jayapura</span><span class="w"></span>
+<span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">generate</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">tasks</span><span class="p">.</span><span class="n">py</span><span class="o">/</span><span class="n">Makefile</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">automate</span><span class="w"> </span><span class="n">generation</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">publishing</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="n">n</span><span class="w"></span>
+</pre></div>
+
+
+<p>Jawaban kita bisa berbeda, silahkan dikondisikan sesuai kebutuhan kamu.</p>
+<p>Default language: Silakan pilih 2 kode bahasa dari Panduan <a href="https://www.loc.gov/standards/iso639-2/php/code_list.php">ISO 639.1</a></p>
+<p>Time zone: pilih zona waktu kalian dari daftar zona waktu di <a href="http://en.wikipedia.org/wiki/List_of_tz_database_time_zones">Wikipedia</a>.</p>
+<p>Setelah kamu menginstall pelican, maka struktur folder akan menjadi seperti ini</p>
+<div class="highlight"><pre><span></span><span class="err">blog</span>
+<span class="err">  ├── output</span>
+<span class="err">  └── source</span>
+<span class="err">       ├── content (folder)</span>
+<span class="err">       ├── output (folder)</span>
+<span class="err">       ├── pelicanconf.py</span>
+<span class="err">       └── publishconf.py</span>
+</pre></div>
+
+
+<p>berikut adalah penjelasan masing-masing file:</p>
+<ul>
+<li>content (folder): tempat menyimpan kontent website</li>
+<li>output (folder): lokasi default tempat menyimpan hasil generate static site</li>
+<li>pelicanconf.py: file pengaturan website</li>
+<li>publishconf.py: file pengaturan tambahan ketika website di publikasikan</li>
+</ul>
+<p>Secara default pelican akan menghasilkan static site di folder <code>blog/source/output</code>. Kita harus menyetel agar pelican menghasilkan output static site di folder <code>blog/output/</code>.</p>
+<p>Hapus folder <code>blog/source/output</code>. Kemudian buka file <code>pelicanconf.py</code> dan tambahkan baris kode ini.</p>
+<div class="highlight"><pre><span></span><span class="err">OUTPUT_PATH = &#39;../output&#39;</span>
+</pre></div>
+
+
+<p>Untuk generate static site jalankan perintah di bawah ini pada folder source</p>
+<div class="highlight"><pre><span></span><span class="err">pelican content</span>
+</pre></div>
+
+
+<p>Untuk menjalankan website jalankan perintah ini</p>
+<div class="highlight"><pre><span></span><span class="err">pelican --listen</span>
+</pre></div>
+
+
+<p>Anda dapat mengakses blog anda di http://127.0.0.1</p>
+<h2>Install Tema Pelican: Elegant</h2>
+
+
+             
+ 
+            
+            
+            
+
+
+
+
+
+
+            <hr/>
+        </div>
+        <section id="article-sidebar" class="span2">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2020-05-17T16:10:00+09:00">May 17, 2020</time>
+
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#python-ref">python</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="/tags.html#pelican-ref">pelican
+                    <span>1</span>
+</a></li>
+                <li><a href="/tags.html#python-ref">python
+                    <span>2</span>
+</a></li>
+            </ul>
+<h4>Contact</h4>
+<div id="sidebar-social-link">
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>
