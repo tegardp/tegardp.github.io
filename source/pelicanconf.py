@@ -5,6 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = 'Tegardp'
 SITENAME = "Tegar Dani's Blog"
 SITEURL = 'https://tegardp.github.io'
+DISQUS_SITENAME = "tegardani"
 
 PATH = 'content'
 OUTPUT_PATH = '../output'
@@ -12,7 +13,6 @@ ARTICLE_PATHS = ['articles']
 STATIC_PATHS = ['img', 'pdf']
 PAGE_PATHS = ['pages']
 THEME = 'theme/elegant'
-
 
 TIMEZONE = 'Asia/Jayapura'
 
