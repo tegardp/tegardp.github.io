@@ -1,6 +1,6 @@
 Title: Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican
 Date: 2020-5-17 16:10
-Modified: 2020-5-17 16:10
+Modified: 2020-5-22 20:08
 Category: python
 Tags: python, pelican 
 Slug: membuat-blog-menggunakan-pelican-dan-python-1
@@ -24,11 +24,10 @@ Tutorial ini akan memandu kamu untuk membuat blog mu sendiri. Mulai dari mengins
  - Generate static website
  - Menginstall Tema: Elegant
 
-## Membuat static site dengan Pelican
-### Install Python
+## Install Python
 Lakukan instalasi python terlebih dahulu. Kamu bisa mengunduhnya [di sini](https://www.python.org/downloads/).
 
-### Manajemen Folder
+## Manajemen Folder
 
 Selanjutnya buat folder bernama `blog`. Kemudian buat dua folder di dalamnya bernama `output` dan `source`.
 
@@ -38,7 +37,7 @@ blog
   └── source
 ```
 
-### Install Virtualenv
+## Install Virtualenv
 Virtualenv adalah tool yang digunakan untuk membuat suatu Python Environment yang terisolasi. Keuntungannya adalah komponen yang anda tambahkan atau hapus di environment ini tidak akan mempengaruhi environment lain. Begitupula apabila anda menghapus komponen yang sama di environment lain. Maka environment ini akan tetap aman terjaga.
 
 Instalasi virtualenv menggunakan perintah di bawah ini
@@ -74,7 +73,7 @@ Setelah selesai digunakan kamu bisa mematikan virtual environment menggunakan pe
 ```
 deactivate
 ```
-### Install Pelican
+## Install Pelican
 Pastikan virtual environment dalam kondisi aktif. Kemudian install komponen yang dibutuhkan
 
 ```

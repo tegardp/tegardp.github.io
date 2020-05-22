@@ -1,19 +1,11 @@
 Title: Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat konten
 Date: 2020-5-18 06:10
-Modified: 2020-5-18 06:10
+Modified: 2020-5-22 20:04
 Category: python
 Tags: python, pelican 
 Slug: membuat-blog-menggunakan-pelican-dan-python-2
 Authors: tegardp
 Summary: Panduan membuat blog statis menggunakan Pelican
-
-Membuat web statis sendiri memiliki keunggulan dibandingkan tradisional web yang menggunakan database untuk menyimpan konten.
-
-* Web statis lebih cepat dibandingkan tradisional web
-
-* Hosting lebih murah karena tidak menggunakan database. Bahkan gratis apabila anda menggunakan github
-
-Tutorial ini akan memandu kamu untuk membuat blog mu sendiri. Mulai dari menginstall Pelican hingga menunggahnya di Github (gratis)
 
 ## Prasyarat
 * Telah melakukan instalasi dan konfigurasi pelican seperti pada [Instalasi dan Tema Pelican]({filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-1.md)
@@ -56,15 +48,15 @@ Informasi terkait metadata
 
 | Keyword | Required? | Usage |
 | ------- | --------- | ----- |
-|Title | Yes | judul post|
-|Author | Yes | penulis post|
-|Date | Yes | tanggal publikasi dalam format YYYY-mm-dd hh:mm|
-|Modified | No | terakhir disunting dalam format YYYY-mm-dd hh:mm|
-|Category | Yes | topic post secara umum|
-|Tags | No | berbagai jenis topik yang tercangkup dalam post, dipisah menggunakan koma|
+|Title | Yes | Judul post|
+|Author | Yes | Penulis post|
+|Date | Yes | Tanggal publikasi dalam format YYYY-mm-dd hh:mm|
+|Modified | No | Terakhir disunting dalam format YYYY-mm-dd hh:mm|
+|Category | Yes | Topic post secara umum|
+|Tags | No | Nerbagai jenis topik yang tercangkup dalam post, dipisah menggunakan koma|
 |Summary | No | Sinopsis post|
-|Slug | No | nama file .html yang akan digenerate oleh pelican dipisah dengan simbol "-" |
-|Status | No | pilih salah satu published, draft or hidden|
+|Slug | No | Nama file .html yang akan digenerate oleh pelican dipisah dengan simbol "-" |
+|Status | No | Pilih salah satu published, draft or hidden|
 
 generate ulang website menggunakan perintah
 ```

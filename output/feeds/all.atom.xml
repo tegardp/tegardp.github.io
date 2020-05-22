@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tegar Dani's Blog</title><link href="https://tegardp.github.io/" rel="alternate"></link><link href="https://tegardp.github.io/feeds/all.atom.xml" rel="self"></link><id>https://tegardp.github.io/</id><updated>2020-05-18T06:10:00+09:00</updated><entry><title>Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat konten</title><link href="https://tegardp.github.io/articles/2020/05/18/membuat-blog-menggunakan-pelican-dan-python-2/" rel="alternate"></link><published>2020-05-18T06:10:00+09:00</published><updated>2020-05-18T06:10:00+09:00</updated><author><name>tegardp</name></author><id>tag:tegardp.github.io,2020-05-18:/articles/2020/05/18/membuat-blog-menggunakan-pelican-dan-python-2/</id><summary type="html">&lt;p&gt;Panduan membuat blog statis menggunakan Pelican&lt;/p&gt;</summary><content type="html">&lt;p&gt;Membuat web statis sendiri memiliki keunggulan dibandingkan tradisional web yang menggunakan database untuk menyimpan konten.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Web statis lebih cepat dibandingkan tradisional web&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Hosting lebih murah karena tidak menggunakan database. Bahkan gratis apabila anda menggunakan github&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Tutorial ini akan memandu kamu untuk membuat blog mu sendiri. Mulai dari menginstall Pelican hingga menunggahnya di Github (gratis)&lt;/p&gt;
-&lt;h2&gt;Prasyarat&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tegar Dani's Blog</title><link href="https://tegardp.github.io/" rel="alternate"></link><link href="https://tegardp.github.io/feeds/all.atom.xml" rel="self"></link><id>https://tegardp.github.io/</id><updated>2020-05-22T20:08:00+09:00</updated><entry><title>Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat konten</title><link href="https://tegardp.github.io/articles/2020/05/18/membuat-blog-menggunakan-pelican-dan-python-2/" rel="alternate"></link><published>2020-05-18T06:10:00+09:00</published><updated>2020-05-22T20:04:00+09:00</updated><author><name>tegardp</name></author><id>tag:tegardp.github.io,2020-05-18:/articles/2020/05/18/membuat-blog-menggunakan-pelican-dan-python-2/</id><summary type="html">&lt;p&gt;Panduan membuat blog statis menggunakan Pelican&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Prasyarat&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Telah melakukan instalasi dan konfigurasi pelican seperti pada &lt;a href="https://tegardp.github.io/articles/2020/05/17/membuat-blog-menggunakan-pelican-dan-python-1/"&gt;Instalasi dan Tema Pelican&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -58,32 +48,32 @@
 &lt;tr&gt;
 &lt;td&gt;Title&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;judul post&lt;/td&gt;
+&lt;td&gt;Judul post&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Author&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;penulis post&lt;/td&gt;
+&lt;td&gt;Penulis post&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Date&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;tanggal publikasi dalam format YYYY-mm-dd hh:mm&lt;/td&gt;
+&lt;td&gt;Tanggal publikasi dalam format YYYY-mm-dd hh:mm&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Modified&lt;/td&gt;
 &lt;td&gt;No&lt;/td&gt;
-&lt;td&gt;terakhir disunting dalam format YYYY-mm-dd hh:mm&lt;/td&gt;
+&lt;td&gt;Terakhir disunting dalam format YYYY-mm-dd hh:mm&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Category&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;topic post secara umum&lt;/td&gt;
+&lt;td&gt;Topic post secara umum&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Tags&lt;/td&gt;
 &lt;td&gt;No&lt;/td&gt;
-&lt;td&gt;berbagai jenis topik yang tercangkup dalam post, dipisah menggunakan koma&lt;/td&gt;
+&lt;td&gt;Nerbagai jenis topik yang tercangkup dalam post, dipisah menggunakan koma&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Summary&lt;/td&gt;
@@ -93,12 +83,12 @@
 &lt;tr&gt;
 &lt;td&gt;Slug&lt;/td&gt;
 &lt;td&gt;No&lt;/td&gt;
-&lt;td&gt;nama file .html yang akan digenerate oleh pelican dipisah dengan simbol "-"&lt;/td&gt;
+&lt;td&gt;Nama file .html yang akan digenerate oleh pelican dipisah dengan simbol "-"&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Status&lt;/td&gt;
 &lt;td&gt;No&lt;/td&gt;
-&lt;td&gt;pilih salah satu published, draft or hidden&lt;/td&gt;
+&lt;td&gt;Pilih salah satu published, draft or hidden&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -193,7 +183,7 @@
 &lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Meluncurkan di Github Pages&lt;/a&gt;
 &lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Google Domain&lt;/a&gt;
 &lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 5 - Menambahkan kolom komentar&lt;/a&gt;
-&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Melihat trafik menggunakan Google Analytics&lt;/a&gt;&lt;/p&gt;</content><category term="python"></category><category term="python"></category><category term="pelican"></category></entry><entry><title>Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican</title><link href="https://tegardp.github.io/articles/2020/05/17/membuat-blog-menggunakan-pelican-dan-python-1/" rel="alternate"></link><published>2020-05-17T16:10:00+09:00</published><updated>2020-05-17T16:10:00+09:00</updated><author><name>tegardp</name></author><id>tag:tegardp.github.io,2020-05-17:/articles/2020/05/17/membuat-blog-menggunakan-pelican-dan-python-1/</id><summary type="html">&lt;p&gt;Panduan membuat blog statis menggunakan Pelican&lt;/p&gt;</summary><content type="html">&lt;p&gt;Membuat web statis sendiri memiliki keunggulan dibandingkan tradisional web yang menggunakan database untuk menyimpan konten.&lt;/p&gt;
+&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Melihat trafik menggunakan Google Analytics&lt;/a&gt;&lt;/p&gt;</content><category term="python"></category><category term="python"></category><category term="pelican"></category></entry><entry><title>Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican</title><link href="https://tegardp.github.io/articles/2020/05/17/membuat-blog-menggunakan-pelican-dan-python-1/" rel="alternate"></link><published>2020-05-17T16:10:00+09:00</published><updated>2020-05-22T20:08:00+09:00</updated><author><name>tegardp</name></author><id>tag:tegardp.github.io,2020-05-17:/articles/2020/05/17/membuat-blog-menggunakan-pelican-dan-python-1/</id><summary type="html">&lt;p&gt;Panduan membuat blog statis menggunakan Pelican&lt;/p&gt;</summary><content type="html">&lt;p&gt;Membuat web statis sendiri memiliki keunggulan dibandingkan tradisional web yang menggunakan database untuk menyimpan konten.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Web statis lebih cepat dibandingkan tradisional web&lt;/p&gt;
@@ -214,10 +204,9 @@
 &lt;li&gt;Generate static website&lt;/li&gt;
 &lt;li&gt;Menginstall Tema: Elegant&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Membuat static site dengan Pelican&lt;/h2&gt;
-&lt;h3&gt;Install Python&lt;/h3&gt;
+&lt;h2&gt;Install Python&lt;/h2&gt;
 &lt;p&gt;Lakukan instalasi python terlebih dahulu. Kamu bisa mengunduhnya &lt;a href="https://www.python.org/downloads/"&gt;di sini&lt;/a&gt;.&lt;/p&gt;
-&lt;h3&gt;Manajemen Folder&lt;/h3&gt;
+&lt;h2&gt;Manajemen Folder&lt;/h2&gt;
 &lt;p&gt;Selanjutnya buat folder bernama &lt;code&gt;blog&lt;/code&gt;. Kemudian buat dua folder di dalamnya bernama &lt;code&gt;output&lt;/code&gt; dan &lt;code&gt;source&lt;/code&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;blog&lt;/span&gt;
 &lt;span class="err"&gt;  └── output&lt;/span&gt;
@@ -225,7 +214,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h3&gt;Install Virtualenv&lt;/h3&gt;
+&lt;h2&gt;Install Virtualenv&lt;/h2&gt;
 &lt;p&gt;Virtualenv adalah tool yang digunakan untuk membuat suatu Python Environment yang terisolasi. Keuntungannya adalah komponen yang anda tambahkan atau hapus di environment ini tidak akan mempengaruhi environment lain. Begitupula apabila anda menghapus komponen yang sama di environment lain. Maka environment ini akan tetap aman terjaga.&lt;/p&gt;
 &lt;p&gt;Instalasi virtualenv menggunakan perintah di bawah ini&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;pip install virtualenv&lt;/span&gt;
@@ -261,7 +250,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h3&gt;Install Pelican&lt;/h3&gt;
+&lt;h2&gt;Install Pelican&lt;/h2&gt;
 &lt;p&gt;Pastikan virtual environment dalam kondisi aktif. Kemudian install komponen yang dibutuhkan&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;pip install pelican&lt;/span&gt;
 &lt;span class="err"&gt;pip install markdown&lt;/span&gt;
