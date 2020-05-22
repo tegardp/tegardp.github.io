@@ -2,7 +2,7 @@ Title: Perjalanan Menuju Kebebasan Financial PNS (Financial Independence)
 Date: 2020-5-16 17:38
 Modified: 2020-5-16 17:38
 Category: financial
-Tags: financial-independence, 
+Tags: financial-independence, financial, lifestyle
 Slug: perjalanan-menuju-kebebasan-financial-pns
 Authors: tegardp
 Summary: Perjalanan menuju kebebasan financial memang banyak lika-liku, butuh perjuangan besar. Di artikel ini saya akan membahas kiat-kiat menuju kebebasan finansial.
@@ -10,8 +10,7 @@ Summary: Perjalanan menuju kebebasan financial memang banyak lika-liku, butuh pe
 <p align="center">
   <img src="https://trusttreefinancial.com/wp-content/uploads/2018/12/fin-indep-800x559.jpg" alt="https://trusttreefinancial.com/wp-content/uploads/2018/12/fin-indep-800x559.jpg">
 </p>
-
-Perjalanan menuju kebebasan finansial memang banyak lika-liku, sangat membutuhkan perjuangan besar. Karena saya adalah PNS, kali ini saya akan membahas cara menuju kebebasan finansial berdasarkan pengalaman pribadi.
+Kebebasan finansial adalah suatu fase ketika kita memiliki pemasukan, tabungan, investasi dan kas yang cukup untuk membiayai lifestyle yang kita ingin kan. Namun, Perjalanan menuju kebebasan finansial sangat membutuhkan perjuangan dan komitmen yang besar.  Di sini saya adalah seorang PNS, saya akan membahas strategi saya menuju kebebasan finansial berdasarkan pengalaman pribadi.
 
 # **Buat Rencana Keuangan (Budgetting)**
 
@@ -103,3 +102,10 @@ alokasikan dana modal sesuai dengan resiko yang kamu siap tanggung. Misal, 30% d
 
 Jangan pernah mengalokasikan 100% tabungan untuk ini. Percayalah, ini resikonya berat kamu tidak akan sanggup.
 
+# **Komitmen**
+<p align="center">
+  <img src="https://www.theignitionco.com/wp-content/uploads/2017/02/commitment.jpg" alt="https://www.theignitionco.com/wp-content/uploads/2017/02/commitment.jpg">
+</p>
+
+Terakhir, yang paling penting dari semua ini adalah komitmen terhadap strategi yang telah kita buat. Dengan memiliki komitmen yang kuat. Maka apapun yang kamu rencanakan akan terwujud.
+Buka kembali tulisan anda tentang goal yang ingin anda capai. Baca dan tanamkan di kepala sebagai penguat komitmen.

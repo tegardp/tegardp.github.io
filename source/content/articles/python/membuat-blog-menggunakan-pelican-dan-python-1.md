@@ -24,10 +24,11 @@ Tutorial ini akan memandu kamu untuk membuat blog mu sendiri. Mulai dari mengins
  - Generate static website
  - Menginstall Tema: Elegant
 
-## Install Python
+## Membuat static site dengan Pelican
+### Install Python
 Lakukan instalasi python terlebih dahulu. Kamu bisa mengunduhnya [di sini](https://www.python.org/downloads/).
 
-## Manajemen Folder
+### Manajemen Folder
 
 Selanjutnya buat folder bernama `blog`. Kemudian buat dua folder di dalamnya bernama `output` dan `source`.
 
@@ -37,7 +38,7 @@ blog
   └── source
 ```
 
-## Install Virtualenv
+### Install Virtualenv
 Virtualenv adalah tool yang digunakan untuk membuat suatu Python Environment yang terisolasi. Keuntungannya adalah komponen yang anda tambahkan atau hapus di environment ini tidak akan mempengaruhi environment lain. Begitupula apabila anda menghapus komponen yang sama di environment lain. Maka environment ini akan tetap aman terjaga.
 
 Instalasi virtualenv menggunakan perintah di bawah ini
@@ -73,7 +74,7 @@ Setelah selesai digunakan kamu bisa mematikan virtual environment menggunakan pe
 ```
 deactivate
 ```
-## Install Pelican
+### Install Pelican
 Pastikan virtual environment dalam kondisi aktif. Kemudian install komponen yang dibutuhkan
 
 ```
@@ -139,7 +140,7 @@ Untuk menjalankan website jalankan perintah ini
 pelican --listen
 ```
 
-Anda dapat mengakses blog anda di http://127.0.0.1
+Anda dapat mengakses blog anda di `http://127.0.0.1:8000/`
 
 <p align="center">
   <img src="https://i.imgur.com/3CxmyHm.png" alt="https://i.imgur.com/3CxmyHm.png">
@@ -179,6 +180,8 @@ Anda dapat mengakses tampilan terbaru blog anda di http://127.0.0.1
 <p align="center">
   <img src="https://i.imgur.com/Zko0iM4.png" alt="https://i.imgur.com/Zko0iM4.png">
 </p>
+
+Karena web ini belum memiliki konten, maka tampilan halaman akan terlihat kosong.
 
 ## Selanjutnya
 Pada artikel ini kita belajar bagaimana cara menginstall pelican dan generate static site serta menambahkan tema elegant. Tutorial selanjutnya adalah bagaimana cara [membuat konten]()
