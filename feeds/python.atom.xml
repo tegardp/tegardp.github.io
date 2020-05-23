@@ -180,9 +180,9 @@
 &lt;p&gt;Artikel ini adalah bagian dari seri tutorial bagaimana membuat blog menggunakan pelican dan Python&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://tegardp.github.io/articles/2020/05/17/membuat-blog-menggunakan-pelican-dan-python-1/"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican&lt;/a&gt;
 &lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat Konten&lt;/a&gt;
-&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Meluncurkan di Github Pages&lt;/a&gt;
+&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages&lt;/a&gt;
 &lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Google Domain&lt;/a&gt;
-&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 5 - Menambahkan kolom komentar&lt;/a&gt;
+&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 5 - Menambahkan kolom komentar menggunakan Disqus&lt;/a&gt;
 &lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Melihat trafik menggunakan Google Analytics&lt;/a&gt;&lt;/p&gt;</content><category term="python"></category><category term="python"></category><category term="pelican"></category></entry><entry><title>Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican</title><link href="https://tegardp.github.io/articles/2020/05/17/membuat-blog-menggunakan-pelican-dan-python-1/" rel="alternate"></link><published>2020-05-17T16:10:00+09:00</published><updated>2020-05-22T20:08:00+09:00</updated><author><name>tegardp</name></author><id>tag:tegardp.github.io,2020-05-17:/articles/2020/05/17/membuat-blog-menggunakan-pelican-dan-python-1/</id><summary type="html">&lt;p&gt;Panduan membuat blog statis menggunakan Pelican&lt;/p&gt;</summary><content type="html">&lt;p&gt;Membuat web statis sendiri memiliki keunggulan dibandingkan tradisional web yang menggunakan database untuk menyimpan konten.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -356,7 +356,7 @@ Pada tutorial kali ini saya akan menggunakan tema &lt;code&gt;elegant&lt;/code&g
 &lt;p&gt;Artikel ini adalah bagian dari seri tutorial bagaimana membuat blog menggunakan pelican dan Python&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://tegardp.github.io/articles/2020/05/17/membuat-blog-menggunakan-pelican-dan-python-1/"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican&lt;/a&gt;
 &lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat Konten&lt;/a&gt;
-&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Luncurkan di Github Pages&lt;/a&gt;
+&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages&lt;/a&gt;
 &lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Google Domain&lt;/a&gt;
-&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 5 - Menambahkan kolom komentar&lt;/a&gt;
+&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 5 - Menambahkan kolom komentar menggunakan Disqus&lt;/a&gt;
 &lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Melihat trafik menggunakan Google Analytics&lt;/a&gt;&lt;/p&gt;</content><category term="python"></category><category term="python"></category><category term="pelican"></category></entry></feed>
