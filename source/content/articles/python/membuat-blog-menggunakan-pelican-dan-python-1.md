@@ -147,7 +147,7 @@ Anda dapat mengakses blog anda di `http://127.0.0.1:8000/`
 
 ## Install Tema Pelican: Elegant
 Agar web kamu terlihat lebih menarik kamu bisa menginstall beberapa tema yang telah di sediakan. Kamu bisa mengunduhnya di [tema pelican](https://github.com/getpelican/pelican-themes).
-Pada tutorial kali ini saya akan menggunakan tema `elegant` yang dapat diunduh [di sini](https://github.com/Pelican-Elegant/elegant).
+Pada tutorial kali ini aku menggunakan tema `elegant` yang dapat diunduh [di sini](https://github.com/Pelican-Elegant/elegant).
 
 Instalasi tema dimulai dari membuat folder `theme` terlebih dahulu di dalam folder source. setelah itu kamu dapat mengekstrak tema elegant ke suatu folder di dalam folder `theme`
 ```

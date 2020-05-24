@@ -319,7 +319,7 @@
 
 &lt;h2&gt;Install Tema Pelican: Elegant&lt;/h2&gt;
 &lt;p&gt;Agar web kamu terlihat lebih menarik kamu bisa menginstall beberapa tema yang telah di sediakan. Kamu bisa mengunduhnya di &lt;a href="https://github.com/getpelican/pelican-themes"&gt;tema pelican&lt;/a&gt;.
-Pada tutorial kali ini saya akan menggunakan tema &lt;code&gt;elegant&lt;/code&gt; yang dapat diunduh &lt;a href="https://github.com/Pelican-Elegant/elegant"&gt;di sini&lt;/a&gt;.&lt;/p&gt;
+Pada tutorial kali ini aku menggunakan tema &lt;code&gt;elegant&lt;/code&gt; yang dapat diunduh &lt;a href="https://github.com/Pelican-Elegant/elegant"&gt;di sini&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Instalasi tema dimulai dari membuat folder &lt;code&gt;theme&lt;/code&gt; terlebih dahulu di dalam folder source. setelah itu kamu dapat mengekstrak tema elegant ke suatu folder di dalam folder &lt;code&gt;theme&lt;/code&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;blog&lt;/span&gt;
 &lt;span class="err"&gt;  └── source&lt;/span&gt;
