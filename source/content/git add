@@ -1,0 +1,5 @@
+git add .
+git commit -m "Artikel: Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages*
+git push -u origin dev
+ghp-import output -r origin -b master
+git push origin master
