@@ -24,7 +24,7 @@ Ini Jawaban **Ryan**: "Ngga harus gar, kuncinya ada diperbanyak latihan. Mau pak
 
 **Toyib**, Toyib adalah salah satu teman semasa kuliah yang cukup akrab denganku. Dia jago motret. Mulai kutanya pertanyaan standar pemula "Toy, Aku pengen belajar fotografi nih, Kalo mau beli kamera bagusnya kamera apa ya? DSLR, Mirrorless, Compact? perlu beli lensa gak?"
 
-Ini Jawaban **Toyib**: "Mau pakai kamera apa aja terserah sih. Yang penting bisa lihat komposisi dan *point of interest*. Percuma juga kalo punya kamera bagus tapi gak tau fungsi-fungsi di kameranya. Tapi secara keseluruhan aku lebih suka DSLR."
+Ini Jawaban **Toyib**: "Mau pakai kamera apa aja terserah sih. Yang penting bisa lihat komposisi dan *point of interest*. Semua jenis kamera punya pros dan cons, tinggal disesuaikan dengan kebutuhan dan keterjangkauan. Tapi, overall aku lebih suka pakai DSLR."
 
 **Brilian**, Sesuai namanya kakak kelasku yang satu ini sangat brilian hehe. Dia salah satu programmer dan data scientist handal yang kukenal. Dia juga pernah pakai windows dan MacOS. Tanpa basa basi, aku bertanya padanya "Mas Bril, kalo aku pake Mac. Apakah kemampuan ngodingku bakal meningkat?"
 
@@ -42,6 +42,6 @@ Pertanyaan ini membuat ia bernafas panjang. Yang terpenting bukanlah pensil yang
 
 Sontak setelah saya membaca ini. Pikiranku menjadi ringan. Jadi ini maksud dari apa yang dikatakan oleh teman-temanku sebelumnya. Yang terpenting bukanlah alat yang digunakan, seberapa bagus mereknya, seberapa mahal harganya. Yang terpenting adalah kemampuan dari penggunanya.
 
-Kamu harus meninggalkan bertanya pertanyaan semacam ini dan mulai mengasah kemampuanmu! Tidak mengapa menggunakan peralatan seadanya dan peralatan murahan. Asahlah kemampuanmu menggunakan peralatan tersebut, pakailah hingga alat tersebut tidak lagi dapat mendukung kemampuanmu. Barulah kamu bisa *upgrade* alat-alatmu itu.
+Kamu harus meninggalkan bertanya pertanyaan semacam ini dan mulai mengasah kemampuanmu! Tidak mengapa menggunakan peralatan seadanya dan peralatan murahan. Asahlah kemampuanmu menggunakan peralatan tersebut, pakailah hingga alat tersebut tidak lagi dapat mendukung kemampuanmu. Barulah kamu bisa *upgrade* alat-alatmu itu!
 
 
