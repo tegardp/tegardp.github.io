@@ -1,5 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tegar Dani's Blog</title><link href="https://tegardp.github.io/" rel="alternate"></link><link href="https://tegardp.github.io/feeds/all.atom.xml" rel="self"></link><id>https://tegardp.github.io/</id><updated>2020-05-25T09:30:00+09:00</updated><entry><title>Hey Jo, Bagus banget desainmu? Pake Ipad Pro ya?</title><link href="https://tegardp.github.io/articles/2020/05/25/hey-jo-bagus-banget-desainmu-pake-ipad-pro-ya/" rel="alternate"></link><published>2020-05-25T09:30:00+09:00</published><updated>2020-05-25T09:30:00+09:00</updated><author><name>tegardp</name></author><id>tag:tegardp.github.io,2020-05-25:/articles/2020/05/25/hey-jo-bagus-banget-desainmu-pake-ipad-pro-ya/</id><summary type="html">&lt;p align="center"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tegar Dani's Blog</title><link href="https://tegardp.github.io/" rel="alternate"></link><link href="https://tegardp.github.io/feeds/all.atom.xml" rel="self"></link><id>https://tegardp.github.io/</id><updated>2020-05-26T03:35:00+09:00</updated><entry><title>Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages</title><link href="https://tegardp.github.io/articles/2020/05/26/membuat-blog-menggunakan-pelican-dan-python-2/" rel="alternate"></link><published>2020-05-26T03:35:00+09:00</published><updated>2020-05-26T03:35:00+09:00</updated><author><name>tegardp</name></author><id>tag:tegardp.github.io,2020-05-26:/articles/2020/05/26/membuat-blog-menggunakan-pelican-dan-python-2/</id><summary type="html">&lt;p&gt;Panduan membuat blog statis menggunakan Pelican&lt;/p&gt;</summary><content type="html">&lt;p&gt;Setelah kamu berhasil membuat web statis. Kamu pasti ingin meluncurkannya supaya dapat dibaca oleh semua orang.&lt;/p&gt;
+&lt;p&gt;Cara yang paling mudah adalah meluncurkannya di github pages.&lt;/p&gt;
+&lt;h2&gt;Prasyarat&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Pengetahuan dasar mengenai git dan github&lt;/li&gt;
+&lt;li&gt;Git sudah terinstall&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Goal&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Membuat repository github untuk menyimpan kode dan menjalankan website&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Mengunggah website ke Github Pages&lt;/h2&gt;
+&lt;p&gt;Ketika membangun web statis, alangkah baiknya memisahkan antara folder &lt;em&gt;source code&lt;/em&gt; dengan folder &lt;em&gt;website&lt;/em&gt;. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;blog&lt;/span&gt;
+&lt;span class="err"&gt;  └── output&lt;/span&gt;
+&lt;span class="err"&gt;  └── source&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Kita akan menyimpan kedua folder tersebut ke dalam satu &lt;em&gt;repository&lt;/em&gt; github. Dari satu repo tersebut akan dibuat dua cabang. cabang &lt;em&gt;master&lt;/em&gt; untuk menyimpan folder &lt;em&gt;website&lt;/em&gt; dan cabang &lt;em&gt;dev&lt;/em&gt; untuk menyimpan folder &lt;em&gt;source code&lt;/em&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;(github repo: tegardp.github.io)&lt;/span&gt;
+&lt;span class="err"&gt;blog&lt;/span&gt;
+&lt;span class="err"&gt;  └── output (branch: master)&lt;/span&gt;
+&lt;span class="err"&gt;  └── source (branch: dev)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Langkah pertama adalah login ke Github dan buatlah repository baru bernama &lt;em&gt;username.github.io&lt;/em&gt;.&lt;/p&gt;
+&lt;p align="center"&gt;
+  &lt;img src="https://i.imgur.com/wyO0UD2.png" alt="https://i.imgur.com/wyO0UD2.png"&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Buka command prompt / Terminal. Kemudian &lt;em&gt;generate&lt;/em&gt; untuk perbarui &lt;em&gt;website&lt;/em&gt; menggunakan perintah&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;pelican content -s publishconf.py&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Sekarang gunakan perintah git di folder &lt;code&gt;blog&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="n"&gt;remote&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tegardp&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tegardp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;checkout&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="n"&gt;dev&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;First commit*&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;dev&lt;/span&gt;
+&lt;span class="n"&gt;ghp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;output&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Setelah itu anda tunggu sebentar sekitar 30 menit. Anda dapat mengakses website anda di &lt;code&gt;username.github.io&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;Selanjutnya&lt;/h2&gt;
+&lt;p&gt;Pada artikel ini kamu telah berhasil mengunggah website kamu di github pages dan juga membuat custom domain. Tutorial selanjutnya adalah bagaimana cara &lt;a href=""&gt;Custom domain menggunakan Github Pages dan Niagahoster&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Series&lt;/h2&gt;
+&lt;p&gt;Artikel ini adalah bagian dari seri tutorial bagaimana membuat blog menggunakan pelican dan Python&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://tegardp.github.io/articles/2020/05/17/membuat-blog-menggunakan-pelican-dan-python-1/"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican&lt;/a&gt;
+&lt;a href="filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-2.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat Konten&lt;/a&gt;
+&lt;a href="filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-3.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages&lt;/a&gt;
+&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Niagahoster&lt;/a&gt;
+&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 5 - Menambahkan kolom komentar menggunakan Disqus&lt;/a&gt;
+&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Melihat trafik menggunakan Google Analytics&lt;/a&gt;&lt;/p&gt;</content><category term="python"></category><category term="python"></category><category term="pelican"></category></entry><entry><title>Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages</title><link href="https://tegardp.github.io/articles/2020/05/26/membuat-blog-menggunakan-pelican-dan-python-2/" rel="alternate"></link><published>2020-05-26T03:35:00+09:00</published><updated>2020-05-26T03:35:00+09:00</updated><author><name>tegardp</name></author><id>tag:tegardp.github.io,2020-05-26:/articles/2020/05/26/membuat-blog-menggunakan-pelican-dan-python-2/</id><summary type="html">&lt;p&gt;Panduan membuat blog statis menggunakan Pelican&lt;/p&gt;</summary><content type="html">&lt;p&gt;Setelah kamu berhasil membuat web statis. Kamu pasti ingin meluncurkannya supaya dapat dibaca oleh semua orang.&lt;/p&gt;
+&lt;p&gt;Cara yang paling mudah adalah meluncurkannya di github pages.&lt;/p&gt;
+&lt;h2&gt;Prasyarat&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Pengetahuan dasar mengenai git dan github&lt;/li&gt;
+&lt;li&gt;Git sudah terinstall&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Goal&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Membuat repository github untuk menyimpan kode dan menjalankan website&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Mengunggah website ke Github Pages&lt;/h2&gt;
+&lt;p&gt;Ketika membangun web statis, alangkah baiknya memisahkan antara folder &lt;em&gt;source code&lt;/em&gt; dengan folder &lt;em&gt;website&lt;/em&gt;. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;blog&lt;/span&gt;
+&lt;span class="err"&gt;  └── output&lt;/span&gt;
+&lt;span class="err"&gt;  └── source&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Kita akan menyimpan kedua folder tersebut ke dalam satu &lt;em&gt;repository&lt;/em&gt; github. Dari satu repo tersebut akan dibuat dua cabang. cabang &lt;em&gt;master&lt;/em&gt; untuk menyimpan folder &lt;em&gt;website&lt;/em&gt; dan cabang &lt;em&gt;dev&lt;/em&gt; untuk menyimpan folder &lt;em&gt;source code&lt;/em&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;(github repo: tegardp.github.io)&lt;/span&gt;
+&lt;span class="err"&gt;blog&lt;/span&gt;
+&lt;span class="err"&gt;  └── output (branch: master)&lt;/span&gt;
+&lt;span class="err"&gt;  └── source (branch: dev)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Langkah pertama adalah login ke Github dan buatlah repository baru bernama &lt;em&gt;username.github.io&lt;/em&gt;.&lt;/p&gt;
+&lt;p align="center"&gt;
+  &lt;img src="https://i.imgur.com/wyO0UD2.png" alt="https://i.imgur.com/wyO0UD2.png"&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Buka command prompt / Terminal. Kemudian &lt;em&gt;generate&lt;/em&gt; untuk perbarui &lt;em&gt;website&lt;/em&gt; menggunakan perintah&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;pelican content -s publishconf.py&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Sekarang gunakan perintah git di folder &lt;code&gt;blog&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="n"&gt;remote&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tegardp&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tegardp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;checkout&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="n"&gt;dev&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;First commit*&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;dev&lt;/span&gt;
+&lt;span class="n"&gt;ghp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;output&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Setelah itu anda tunggu sebentar sekitar 30 menit. Anda dapat mengakses website anda di &lt;code&gt;username.github.io&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;Selanjutnya&lt;/h2&gt;
+&lt;p&gt;Pada artikel ini kamu telah berhasil mengunggah website kamu di github pages dan juga membuat custom domain. Tutorial selanjutnya adalah bagaimana cara &lt;a href=""&gt;Custom domain menggunakan Github Pages dan Niagahoster&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Series&lt;/h2&gt;
+&lt;p&gt;Artikel ini adalah bagian dari seri tutorial bagaimana membuat blog menggunakan pelican dan Python&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://tegardp.github.io/articles/2020/05/17/membuat-blog-menggunakan-pelican-dan-python-1/"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican&lt;/a&gt;
+&lt;a href="filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-2.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat Konten&lt;/a&gt;
+&lt;a href="filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-3.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages&lt;/a&gt;
+&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Niagahoster&lt;/a&gt;
+&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 5 - Menambahkan kolom komentar menggunakan Disqus&lt;/a&gt;
+&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Melihat trafik menggunakan Google Analytics&lt;/a&gt;&lt;/p&gt;</content><category term="python"></category><category term="python"></category><category term="pelican"></category></entry><entry><title>Hey Jo, Bagus banget desainmu? Pake Ipad Pro ya?</title><link href="https://tegardp.github.io/articles/2020/05/25/hey-jo-bagus-banget-desainmu-pake-ipad-pro-ya/" rel="alternate"></link><published>2020-05-25T09:30:00+09:00</published><updated>2020-05-25T09:30:00+09:00</updated><author><name>tegardp</name></author><id>tag:tegardp.github.io,2020-05-25:/articles/2020/05/25/hey-jo-bagus-banget-desainmu-pake-ipad-pro-ya/</id><summary type="html">&lt;p align="center"&gt;
   &lt;img src="https://i.imgur.com/dUY33WO.png" alt="https://i.imgur.com/dUY33WO.png"&gt;
 &lt;/p&gt;
 
@@ -242,9 +360,193 @@ Selain itu, anak cucu dan keturunanmu juga bisa membaca perjalanan hidup kamu!&l
 &lt;h2&gt;Series&lt;/h2&gt;
 &lt;p&gt;Artikel ini adalah bagian dari seri tutorial bagaimana membuat blog menggunakan pelican dan Python&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://tegardp.github.io/articles/2020/05/17/membuat-blog-menggunakan-pelican-dan-python-1/"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican&lt;/a&gt;
-&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat Konten&lt;/a&gt;
-&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages&lt;/a&gt;
-&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Google Domain&lt;/a&gt;
+&lt;a href="filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-2.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat Konten&lt;/a&gt;
+&lt;a href="filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-3.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages&lt;/a&gt;
+&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Niagahoster&lt;/a&gt;
+&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 5 - Menambahkan kolom komentar menggunakan Disqus&lt;/a&gt;
+&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Melihat trafik menggunakan Google Analytics&lt;/a&gt;&lt;/p&gt;</content><category term="python"></category><category term="python"></category><category term="pelican"></category></entry><entry><title>Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat konten</title><link href="https://tegardp.github.io/articles/2020/05/18/membuat-blog-menggunakan-pelican-dan-python-2/" rel="alternate"></link><published>2020-05-18T06:10:00+09:00</published><updated>2020-05-22T20:04:00+09:00</updated><author><name>tegardp</name></author><id>tag:tegardp.github.io,2020-05-18:/articles/2020/05/18/membuat-blog-menggunakan-pelican-dan-python-2/</id><summary type="html">&lt;p&gt;Panduan membuat blog statis menggunakan Pelican&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Prasyarat&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Telah melakukan instalasi dan konfigurasi pelican seperti pada &lt;a href="https://tegardp.github.io/articles/2020/05/17/membuat-blog-menggunakan-pelican-dan-python-1/"&gt;Instalasi dan Tema Pelican&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Goal&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Membuat artikel dan halaman dengan Markdown&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Workflow&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Konten ditulis menggunakan markdown, di dalam folder &lt;code&gt;content&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Buat file metadata&lt;/li&gt;
+&lt;li&gt;generate ulang website&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Langkah-langkah membuat konten&lt;/h2&gt;
+&lt;p&gt;Buatlah file bernama &lt;code&gt;first_post.md&lt;/code&gt; di dalam folder &lt;code&gt;content&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;blog&lt;/span&gt;
+&lt;span class="err"&gt;  └── source&lt;/span&gt;
+&lt;span class="err"&gt;       ├── content&lt;/span&gt;
+&lt;span class="err"&gt;       |     └── first_post.md (new)&lt;/span&gt;
+&lt;span class="err"&gt;       └── theme&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Buat metadata di dalam file tersebut. Metadata merupakan informasi dasar terkait konten yang akan dimuat. Letak metadata ada di paling atas dokumen. Setelah itu, konten di tulis di paragraf selanjutnya. Langkah pertama adalah buka file &lt;code&gt;first_post.md&lt;/code&gt;, kemudian tambahkan baris di bawah&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;My&lt;/span&gt; &lt;span class="n"&gt;First&lt;/span&gt; &lt;span class="n"&gt;Blog&lt;/span&gt; &lt;span class="n"&gt;Post&lt;/span&gt;
+&lt;span class="n"&gt;Author&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;tegardp&lt;/span&gt;
+&lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2020&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;01&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;01&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;00&lt;/span&gt;
+&lt;span class="n"&gt;Category&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;blogging&lt;/span&gt;
+&lt;span class="n"&gt;Tags&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;markdown&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;
+&lt;span class="n"&gt;Slug&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;my&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;
+
+&lt;span class="n"&gt;Blog&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="n"&gt;goes&lt;/span&gt; &lt;span class="n"&gt;here&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Informasi terkait metadata&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Keyword&lt;/th&gt;
+&lt;th&gt;Required?&lt;/th&gt;
+&lt;th&gt;Usage&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Title&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;Judul post&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Author&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;Penulis post&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Date&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;Tanggal publikasi dalam format YYYY-mm-dd hh:mm&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Modified&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;Terakhir disunting dalam format YYYY-mm-dd hh:mm&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Category&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;Topic post secara umum&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Tags&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;Nerbagai jenis topik yang tercangkup dalam post, dipisah menggunakan koma&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Summary&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;Sinopsis post&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Slug&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;Nama file .html yang akan digenerate oleh pelican dipisah dengan simbol "-"&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Status&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;Pilih salah satu published, draft or hidden&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;generate ulang website menggunakan perintah&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;pelican content&lt;/span&gt;
+&lt;span class="err"&gt;pelican --listen&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;kemudian silahkan akses di &lt;code&gt;http://127.0.0.1:8000/&lt;/code&gt;&lt;/p&gt;
+&lt;p align="center"&gt;
+  &lt;img src="https://i.imgur.com/O6l3U2c.png" alt="https://i.imgur.com/O6l3U2c.png"&gt;
+&lt;/p&gt;
+
+&lt;p&gt;tadaaaaaa!! mudah bukan?&lt;/p&gt;
+&lt;h2&gt;Merapikan folder content&lt;/h2&gt;
+&lt;p&gt;Semakin sering kamu membuat konten. File-file yang terdapat pada folder konten akan makin tidak beraturan. Agar folder konten kamu lebih rapi, dan lebih terorganisir. Maka, alangkah baiknya jika kita buat struktur dalam folder &lt;code&gt;content&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;blog&lt;/span&gt;
+&lt;span class="err"&gt;└── source&lt;/span&gt;
+&lt;span class="err"&gt;     └── content&lt;/span&gt;
+&lt;span class="err"&gt;          └── articles (new)&lt;/span&gt;
+&lt;span class="err"&gt;          |   └── first_post.md&lt;/span&gt;
+&lt;span class="err"&gt;          |   └── second_post.md&lt;/span&gt;
+&lt;span class="err"&gt;          |   └── etc.md&lt;/span&gt;
+&lt;span class="err"&gt;          └── img (new)&lt;/span&gt;
+&lt;span class="err"&gt;          |   └── python_icon.png&lt;/span&gt;
+&lt;span class="err"&gt;          └── pages (new)&lt;/span&gt;
+&lt;span class="err"&gt;          |   └── about_me.md&lt;/span&gt;
+&lt;span class="err"&gt;          └── pdf (new)&lt;/span&gt;
+&lt;span class="err"&gt;              └── pelican.pdf&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Agar pelican dapat menemukan konten artikel, gambar, halaman dan pdf. Maka kamu harus memberitahunya terlabih dahulu dengan cara menambahkan baris kode di bawah ini ke dalam file &lt;code&gt;pelicanconf.py&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt; ARTICLE_PATHS = [&amp;#39;articles&amp;#39;]&lt;/span&gt;
+&lt;span class="err"&gt; STATIC_PATHS = [&amp;#39;img&amp;#39;, &amp;#39;pdf&amp;#39;]&lt;/span&gt;
+&lt;span class="err"&gt; PAGE_PATHS = [&amp;#39;pages&amp;#39;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Setelah itu, generate ulang website dengan menggunakan perintah&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;pelican content&lt;/span&gt;
+&lt;span class="err"&gt;pelican --listen&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Mendefinisikan struktur URL&lt;/h2&gt;
+&lt;p&gt;Secara default, struktur url pada artikel adalah sebagai berikut&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;http://127.0.0.1:8000/my-first-post.html&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Agar lebih informatif, kita perlu mendefinisikan tanggal publikasi pada post tersebut. Tambahkan baris kode di bawah ini ke dalam file &lt;code&gt;pelicanconf.py&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;ARTICLE_URL = &amp;#39;articles/{date:%Y}/{date:%m}/{date:%d}/{slug}/&amp;#39;&lt;/span&gt;
+&lt;span class="err"&gt;ARTICLE_SAVE_AS = &amp;#39;articles/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Seperti biasa, generate ulang website dengan menggunakan perintah&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;pelican content&lt;/span&gt;
+&lt;span class="err"&gt;pelican --listen&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Sekarang url artikel akan berubah menjadi seperti di bawah&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;http://127.0.0.1:8000/articles/2020/01/01/my-first-post/&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;lakukan hal yang sama pada pages, categories, dan tags. Tambahkan kode di bawah ini ke dalam file &lt;code&gt;pelicanconf.py&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;PAGE_URL = &amp;#39;pages/{slug}/&amp;#39;&lt;/span&gt;
+&lt;span class="err"&gt;PAGE_SAVE_AS = &amp;#39;pages/{slug}/index.html&amp;#39;&lt;/span&gt;
+&lt;span class="err"&gt;CATEGORY_URL = &amp;#39;category/{slug}&amp;#39;&lt;/span&gt;
+&lt;span class="err"&gt;CATEGORY_SAVE_AS = &amp;#39;category/{slug}/index.html&amp;#39;&lt;/span&gt;
+&lt;span class="err"&gt;TAG_URL = &amp;#39;tag/{slug}&amp;#39;&lt;/span&gt;
+&lt;span class="err"&gt;TAG_SAVE_AS = &amp;#39;tag/{slug}/index.html&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;generate ulang website dengan menggunakan perintah&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;pelican content&lt;/span&gt;
+&lt;span class="err"&gt;pelican --listen&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Selanjutnya&lt;/h2&gt;
+&lt;p&gt;Pada artikel ini kita belajar bagaimana cara membuat konten dengan menggunakan markdown. Tutorial selanjutnya adalah bagaimana cara &lt;a href=""&gt;Meluncurkan di Github Pages&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Series&lt;/h2&gt;
+&lt;p&gt;Artikel ini adalah bagian dari seri tutorial bagaimana membuat blog menggunakan pelican dan Python&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://tegardp.github.io/articles/2020/05/17/membuat-blog-menggunakan-pelican-dan-python-1/"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican&lt;/a&gt;
+&lt;a href="filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-2.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat Konten&lt;/a&gt;
+&lt;a href="filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-3.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages&lt;/a&gt;
+&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Niagahoster&lt;/a&gt;
 &lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 5 - Menambahkan kolom komentar menggunakan Disqus&lt;/a&gt;
 &lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Melihat trafik menggunakan Google Analytics&lt;/a&gt;&lt;/p&gt;</content><category term="python"></category><category term="python"></category><category term="pelican"></category></entry><entry><title>Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican</title><link href="https://tegardp.github.io/articles/2020/05/17/membuat-blog-menggunakan-pelican-dan-python-1/" rel="alternate"></link><published>2020-05-17T16:10:00+09:00</published><updated>2020-05-22T20:08:00+09:00</updated><author><name>tegardp</name></author><id>tag:tegardp.github.io,2020-05-17:/articles/2020/05/17/membuat-blog-menggunakan-pelican-dan-python-1/</id><summary type="html">&lt;p&gt;Panduan membuat blog statis menggunakan Pelican&lt;/p&gt;</summary><content type="html">&lt;p&gt;Membuat web statis sendiri memiliki keunggulan dibandingkan tradisional web yang menggunakan database untuk menyimpan konten.&lt;/p&gt;
 &lt;ul&gt;
@@ -317,6 +619,7 @@ Selain itu, anak cucu dan keturunanmu juga bisa membaca perjalanan hidup kamu!&l
 &lt;p&gt;Pastikan virtual environment dalam kondisi aktif. Kemudian install komponen yang dibutuhkan&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;pip install pelican&lt;/span&gt;
 &lt;span class="err"&gt;pip install markdown&lt;/span&gt;
+&lt;span class="err"&gt;pip install ghp-import&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -414,13 +717,13 @@ Pada tutorial kali ini aku menggunakan tema &lt;code&gt;elegant&lt;/code&gt; yan
 
 &lt;p&gt;Karena web ini belum memiliki konten, maka tampilan halaman akan terlihat kosong.&lt;/p&gt;
 &lt;h2&gt;Selanjutnya&lt;/h2&gt;
-&lt;p&gt;Pada artikel ini kita belajar bagaimana cara menginstall pelican dan generate static site serta menambahkan tema elegant. Tutorial selanjutnya adalah bagaimana cara &lt;a href=""&gt;membuat konten&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Pada artikel ini kita belajar bagaimana cara menginstall pelican dan generate static site serta menambahkan tema elegant. Tutorial selanjutnya adalah bagaimana cara &lt;a href="filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-2.md"&gt;membuat konten&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Series&lt;/h2&gt;
 &lt;p&gt;Artikel ini adalah bagian dari seri tutorial bagaimana membuat blog menggunakan pelican dan Python&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://tegardp.github.io/articles/2020/05/17/membuat-blog-menggunakan-pelican-dan-python-1/"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican&lt;/a&gt;
-&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat Konten&lt;/a&gt;
-&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages&lt;/a&gt;
-&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Google Domain&lt;/a&gt;
+&lt;a href="filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-2.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat Konten&lt;/a&gt;
+&lt;a href="filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-3.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages&lt;/a&gt;
+&lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Niagahoster&lt;/a&gt;
 &lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 5 - Menambahkan kolom komentar menggunakan Disqus&lt;/a&gt;
 &lt;a href=""&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Melihat trafik menggunakan Google Analytics&lt;/a&gt;&lt;/p&gt;</content><category term="python"></category><category term="python"></category><category term="pelican"></category></entry><entry><title>Perjalanan Menuju Kebebasan Financial PNS (Financial Independence)</title><link href="https://tegardp.github.io/articles/2020/05/16/perjalanan-menuju-kebebasan-financial-pns/" rel="alternate"></link><published>2020-05-16T17:38:00+09:00</published><updated>2020-05-16T17:38:00+09:00</updated><author><name>tegardp</name></author><id>tag:tegardp.github.io,2020-05-16:/articles/2020/05/16/perjalanan-menuju-kebebasan-financial-pns/</id><summary type="html">&lt;p&gt;Perjalanan menuju kebebasan financial memang banyak lika-liku, butuh perjuangan besar. Di artikel ini saya akan membahas kiat-kiat menuju kebebasan finansial.&lt;/p&gt;</summary><content type="html">&lt;p align="center"&gt;
   &lt;img src="https://trusttreefinancial.com/wp-content/uploads/2018/12/fin-indep-800x559.jpg" alt="https://trusttreefinancial.com/wp-content/uploads/2018/12/fin-indep-800x559.jpg"&gt;
