@@ -1,9 +1,9 @@
-Title: Hidupku Berubah Setelah Belajar Fotografi
+Title: Hidupku Berubah Setelah Aku Belajar Fotografi
 Date: 2020-5-24 9:48
 Modified: 2020-5-24 9:48
 Category: fotografi
 Tags: fotografi
-Slug: hidupku-berubah-setelah-belajar-fotografi
+Slug: hidupku-berubah-setelah-aku-belajar-fotografi
 Authors: tegardp
 
 Awalnya aku membeli kamera untuk membuat vlog. Namun, karena peralatan terbatas. Aku mulai belajar fotografi sambil menunggu gajian. Ternyata, belajar fotografi sangat membuka pikiranku. Perspektifku terhadap dunia fotografi berubah drastis. 
