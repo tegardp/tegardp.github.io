@@ -6,6 +6,10 @@ Tags: bullet journal
 Slug: manfaat-journaling-dan-kamu-harus-mencobanya
 Authors: tegardp
 
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Bullet-Journal-by-Matt-Ragland.jpg" alt="https://upload.wikimedia.org/wikipedia/commons/9/97/Bullet-Journal-by-Matt-Ragland.jpg">
+</p>
+
 Secara singkat journal adalah sebuah buku yang kita buat untuk diri sendiri. Isi dari buku tersebut adalah pengalaman, pikiran, rencana dan ide kita. Menulis journal adalah cara untuk membongkar ide ke dalam langkah kecil yang nyata.
 
 Banyak manfaat yang bisa didapatkan dari menulis jurnal. diantaranya adalah

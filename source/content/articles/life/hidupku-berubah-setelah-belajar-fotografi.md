@@ -6,6 +6,10 @@ Tags: fotografi
 Slug: hidupku-berubah-setelah-aku-belajar-fotografi
 Authors: tegardp
 
+<p align="center">
+  <img src="https://dvyvvujm9h0uq.cloudfront.net/com/articles/1543483387-reinhart-julian-1145947-unsplash.jpg" alt="https://dvyvvujm9h0uq.cloudfront.net/com/articles/1543483387-reinhart-julian-1145947-unsplash.jpg">
+</p>
+
 Awalnya aku membeli kamera untuk membuat vlog. Namun, karena peralatan terbatas. Aku mulai belajar fotografi sambil menunggu gajian. Ternyata, belajar fotografi sangat membuka pikiranku. Perspektifku terhadap dunia fotografi berubah drastis. 
 
 Sebelumnya setiap aku membuka instagram dan mendapati sebuah foto, reaksiku biasa aja malah terkadang merendahkan. Namun, Setelah aku belajar fotografi, semua itu berubah. aku jadi lebih menghargai karya foto orang lain. aku jadi merasakan betapa sulitnya mendapatkan gambar tersebut. Betapa berat perjuangan seorang fotografer untuk mencapai titik tersebut.
