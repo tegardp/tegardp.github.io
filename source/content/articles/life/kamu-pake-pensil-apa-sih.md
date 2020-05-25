@@ -7,7 +7,7 @@ Slug: hey-jo-bagus-banget-desainmu-pake-ipad-pro-ya
 Authors: tegardp
 
 <p align="center">
-  <img src="https://imgur.com/a/miU3VRJ" alt="https://imgur.com/a/miU3VRJ">
+  <img src="https://i.imgur.com/dUY33WO.png" alt="https://i.imgur.com/dUY33WO.png">
 </p>
 
 Kamu pernah gak sih, pingin jago banget design tapi bingung mau pakai PC atau pake tablet apa, atau bahkan pake software apa? 
