@@ -153,14 +153,14 @@ pelican --listen
 
 
 ## Selanjutnya
-Pada artikel ini kita belajar bagaimana cara membuat konten dengan menggunakan markdown. Tutorial selanjutnya adalah bagaimana cara [Meluncurkan di Github Pages]()
+Pada artikel ini kita belajar bagaimana cara membuat konten dengan menggunakan markdown. Tutorial selanjutnya adalah bagaimana cara [Meluncurkan di Github Pages]({filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-3.md)
 
 ## Series
 Artikel ini adalah bagian dari seri tutorial bagaimana membuat blog menggunakan pelican dan Python
 
 [Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican]({filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-1.md)
-[Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat Konten](filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-2.md)
-[Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages](filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-3.md)
-[Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Niagahoster]()
-[Membuat Blog Menggunakan Pelican dan Python Bagian 5 - Menambahkan kolom komentar menggunakan Disqus]()
-[Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Melihat trafik menggunakan Google Analytics]()
+[Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat Konten]({filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-2.md)
+[Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages]({filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-3.md)
+[Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Niagahoster]({filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-4)
+[Membuat Blog Menggunakan Pelican dan Python Bagian 5 - Menambahkan kolom komentar menggunakan Disqus]({filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-5.md)
+[Membuat Blog Menggunakan Pelican dan Python Bagian 6 - Melihat trafik menggunakan Google Analytics]({filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-6.md)

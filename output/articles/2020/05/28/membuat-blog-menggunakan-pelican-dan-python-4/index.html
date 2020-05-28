@@ -11,17 +11,17 @@
 
 <meta name="keywords" content="python, pelican, python, " />
 
-<meta property="og:title" content="Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat konten "/>
-<meta property="og:url" content="https://tegardp.github.io/articles/2020/05/18/membuat-blog-menggunakan-pelican-dan-python-2/" />
+<meta property="og:title" content="Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Niagahoster "/>
+<meta property="og:url" content="https://tegardp.github.io/articles/2020/05/28/membuat-blog-menggunakan-pelican-dan-python-4/" />
 <meta property="og:description" content="Panduan membuat blog statis menggunakan Pelican" />
 <meta property="og:site_name" content="Tegar Dani&#39;s Blog" />
 <meta property="og:article:author" content="tegardp" />
-<meta property="og:article:published_time" content="2020-05-18T06:10:00+09:00" />
-<meta property="og:article:modified_time" content="2020-05-22T20:04:00+09:00" />
-<meta name="twitter:title" content="Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat konten ">
+<meta property="og:article:published_time" content="2020-05-28T21:40:00+09:00" />
+<meta property="og:article:modified_time" content="2020-05-28T21:40:00+09:00" />
+<meta name="twitter:title" content="Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Niagahoster ">
 <meta name="twitter:description" content="Panduan membuat blog statis menggunakan Pelican">
 
-        <title>Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat konten  · Tegar Dani&#39;s Blog
+        <title>Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Niagahoster  · Tegar Dani&#39;s Blog
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://tegardp.github.io/theme/css/elegant.prod.css" media="screen">
@@ -75,8 +75,8 @@
 <div class="row-fluid">
     <header class="page-header span10 offset2">
         <h1>
-            <a href="https://tegardp.github.io/articles/2020/05/18/membuat-blog-menggunakan-pelican-dan-python-2/">
-                Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat konten
+            <a href="https://tegardp.github.io/articles/2020/05/28/membuat-blog-menggunakan-pelican-dan-python-4/">
+                Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Niagahoster
             </a>
         </h1>
     </header>
@@ -87,181 +87,60 @@
             
             <h2>Prasyarat</h2>
 <ul>
-<li>Telah melakukan instalasi dan konfigurasi pelican seperti pada <a href="https://tegardp.github.io/articles/2020/05/17/membuat-blog-menggunakan-pelican-dan-python-1/">Instalasi dan Tema Pelican</a></li>
+<li>Sudah melakukan langkah-langkah yang terdapat di <a href="filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-3.md">Tutorial sebelumnya</a></li>
+<li>Menyewa domain di Niagahoster</li>
 </ul>
 <h2>Goal</h2>
 <ul>
-<li>Membuat artikel dan halaman dengan Markdown</li>
+<li>Agar <em>website</em> anda bisa di akses di <em>yourdomain.com</em> </li>
 </ul>
-<h2>Workflow</h2>
-<ul>
-<li>Konten ditulis menggunakan markdown, di dalam folder <code>content</code></li>
-<li>Buat file metadata</li>
-<li>generate ulang website</li>
-</ul>
-<h2>Langkah-langkah membuat konten</h2>
-<p>Buatlah file bernama <code>first_post.md</code> di dalam folder <code>content</code>.</p>
-<div class="highlight"><pre><span></span><span class="err">blog</span>
-<span class="err">  └── source</span>
-<span class="err">       ├── content</span>
-<span class="err">       |     └── first_post.md (new)</span>
-<span class="err">       └── theme</span>
-</pre></div>
-
-
-<p>Buat metadata di dalam file tersebut. Metadata merupakan informasi dasar terkait konten yang akan dimuat. Letak metadata ada di paling atas dokumen. Setelah itu, konten di tulis di paragraf selanjutnya. Langkah pertama adalah buka file <code>first_post.md</code>, kemudian tambahkan baris di bawah</p>
-<div class="highlight"><pre><span></span><span class="n">Title</span><span class="o">:</span> <span class="n">My</span> <span class="n">First</span> <span class="n">Blog</span> <span class="n">Post</span>
-<span class="n">Author</span><span class="o">:</span> <span class="n">tegardp</span>
-<span class="n">Date</span><span class="o">:</span> <span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span> <span class="mi">9</span><span class="o">:</span><span class="mi">00</span>
-<span class="n">Category</span><span class="o">:</span> <span class="n">blogging</span>
-<span class="n">Tags</span><span class="o">:</span> <span class="n">python</span><span class="o">,</span> <span class="n">markdown</span><span class="o">,</span> <span class="n">pelican</span>
-<span class="n">Slug</span><span class="o">:</span> <span class="n">my</span><span class="o">-</span><span class="n">first</span><span class="o">-</span><span class="n">blog</span><span class="o">-</span><span class="n">post</span>
-
-<span class="n">Blog</span> <span class="n">post</span> <span class="n">content</span> <span class="n">goes</span> <span class="n">here</span>
-</pre></div>
-
-
-<p>Informasi terkait metadata</p>
-<table>
-<thead>
-<tr>
-<th>Keyword</th>
-<th>Required?</th>
-<th>Usage</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Title</td>
-<td>Yes</td>
-<td>Judul post</td>
-</tr>
-<tr>
-<td>Author</td>
-<td>Yes</td>
-<td>Penulis post</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Yes</td>
-<td>Tanggal publikasi dalam format YYYY-mm-dd hh:mm</td>
-</tr>
-<tr>
-<td>Modified</td>
-<td>No</td>
-<td>Terakhir disunting dalam format YYYY-mm-dd hh:mm</td>
-</tr>
-<tr>
-<td>Category</td>
-<td>Yes</td>
-<td>Topic post secara umum</td>
-</tr>
-<tr>
-<td>Tags</td>
-<td>No</td>
-<td>Nerbagai jenis topik yang tercangkup dalam post, dipisah menggunakan koma</td>
-</tr>
-<tr>
-<td>Summary</td>
-<td>No</td>
-<td>Sinopsis post</td>
-</tr>
-<tr>
-<td>Slug</td>
-<td>No</td>
-<td>Nama file .html yang akan digenerate oleh pelican dipisah dengan simbol "-"</td>
-</tr>
-<tr>
-<td>Status</td>
-<td>No</td>
-<td>Pilih salah satu published, draft or hidden</td>
-</tr>
-</tbody>
-</table>
-<p>generate ulang website menggunakan perintah</p>
-<div class="highlight"><pre><span></span><span class="err">pelican content</span>
-<span class="err">pelican --listen</span>
-</pre></div>
-
-
-<p>kemudian silahkan akses di <code>http://127.0.0.1:8000/</code></p>
+<h2>Sewa Domain</h2>
+<p>Aku sih tidak mengharuskan menyewa domain di niagahoster. Domain bisa disewa dimanapun seperti Google domain, hostgator dan lainnya. Tapi, di tutorial kali ini aku mau berbagi tutorial menyewa domain di niaga hoster dan mengonfigurasinya dengan Github Pages</p>
+<h2>Menyewa domain di Niagahoster</h2>
+<p>Silahkan kunjungi https://www.niagahoster.co.id/domain-murah untuk mengecek ketersediaan domain.</p>
 <p align="center">
-  <img src="https://i.imgur.com/O6l3U2c.png" alt="https://i.imgur.com/O6l3U2c.png">
+  <img src="https://i.imgur.com/H6bOJEg.png" alt="https://i.imgur.com/H6bOJEg.png">
 </p>
 
-<p>tadaaaaaa!! mudah bukan?</p>
-<h2>Merapikan folder content</h2>
-<p>Semakin sering kamu membuat konten. File-file yang terdapat pada folder konten akan makin tidak beraturan. Agar folder konten kamu lebih rapi, dan lebih terorganisir. Maka, alangkah baiknya jika kita buat struktur dalam folder <code>content</code>.</p>
-<div class="highlight"><pre><span></span><span class="err">blog</span>
-<span class="err">└── source</span>
-<span class="err">     └── content</span>
-<span class="err">          └── articles (new)</span>
-<span class="err">          |   └── first_post.md</span>
-<span class="err">          |   └── second_post.md</span>
-<span class="err">          |   └── etc.md</span>
-<span class="err">          └── img (new)</span>
-<span class="err">          |   └── python_icon.png</span>
-<span class="err">          └── pages (new)</span>
-<span class="err">          |   └── about_me.md</span>
-<span class="err">          └── pdf (new)</span>
-<span class="err">              └── pelican.pdf</span>
-</pre></div>
+<p>Selanjutnya kamu tinggal mengikuti langkah seperti di gambar
+<p align="center">
+  <img src="https://i.imgur.com/YsCDx0h.png" alt="https://i.imgur.com/YsCDx0h.png">
+</p></p>
+<p>Disini aku menggunakan paket personal karena harganya lagi diskon banget. hehe
+<p align="center">
+  <img src="https://i.imgur.com/d03VixQ.png" alt="https://i.imgur.com/d03VixQ.png">
+</p>
+<p align="center">
+  <img src="https://i.imgur.com/Ma8QSp7.png" alt="https://i.imgur.com/Ma8QSp7.png">
+</p></p>
+<p>Setelah kamu berhasil menyewa domain langkah selanjutnya adalah mendaftarkan ip address github ke domain kamu dengan menambahkan custom record. Caranya adalah pada sidebar di samping pilih <strong>Layanan Anda &gt; Domain</strong>. Kemudian, pilih domain yang tadi disewa dan pilih <strong>kelola domain</strong>. Lalu pilih tab <strong>DNS Management</strong>. Kemudian pilih <strong>Add new Record</strong></p>
+<ul>
+<li>A Record = 185.199.108.153</li>
+<li>A Record = 185.199.109.153</li>
+<li>A Record = 185.199.110.153</li>
+<li>A Record = 185.199.111.153</li>
+<li>CNAME = yourusername.github.io</li>
+</ul>
+<p align="center">
+  <img src="https://i.imgur.com/4b9XHKW.png" alt="https://i.imgur.com/4b9XHKW.png">
+</p>
 
+<p align="center">
+  <img src="https://i.imgur.com/WTcFzGQ.png" alt="https://i.imgur.com/WTcFzGQ.png">
+</p>
 
-<p>Agar pelican dapat menemukan konten artikel, gambar, halaman dan pdf. Maka kamu harus memberitahunya terlabih dahulu dengan cara menambahkan baris kode di bawah ini ke dalam file <code>pelicanconf.py</code></p>
-<div class="highlight"><pre><span></span><span class="err"> ARTICLE_PATHS = [&#39;articles&#39;]</span>
-<span class="err"> STATIC_PATHS = [&#39;img&#39;, &#39;pdf&#39;]</span>
-<span class="err"> PAGE_PATHS = [&#39;pages&#39;]</span>
-</pre></div>
-
-
-<p>Setelah itu, generate ulang website dengan menggunakan perintah</p>
-<div class="highlight"><pre><span></span><span class="err">pelican content</span>
-<span class="err">pelican --listen</span>
-</pre></div>
-
-
-<h2>Mendefinisikan struktur URL</h2>
-<p>Secara default, struktur url pada artikel adalah sebagai berikut</p>
-<div class="highlight"><pre><span></span><span class="c">http://127.0.0.1:8000/my-first-post.html</span>
-</pre></div>
-
-
-<p>Agar lebih informatif, kita perlu mendefinisikan tanggal publikasi pada post tersebut. Tambahkan baris kode di bawah ini ke dalam file <code>pelicanconf.py</code></p>
-<div class="highlight"><pre><span></span><span class="err">ARTICLE_URL = &#39;articles/{date:%Y}/{date:%m}/{date:%d}/{slug}/&#39;</span>
-<span class="err">ARTICLE_SAVE_AS = &#39;articles/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html&#39;</span>
-</pre></div>
-
-
-<p>Seperti biasa, generate ulang website dengan menggunakan perintah</p>
-<div class="highlight"><pre><span></span><span class="err">pelican content</span>
-<span class="err">pelican --listen</span>
-</pre></div>
-
-
-<p>Sekarang url artikel akan berubah menjadi seperti di bawah</p>
-<div class="highlight"><pre><span></span><span class="c">http://127.0.0.1:8000/articles/2020/01/01/my-first-post/</span>
-</pre></div>
-
-
-<p>lakukan hal yang sama pada pages, categories, dan tags. Tambahkan kode di bawah ini ke dalam file <code>pelicanconf.py</code></p>
-<div class="highlight"><pre><span></span><span class="err">PAGE_URL = &#39;pages/{slug}/&#39;</span>
-<span class="err">PAGE_SAVE_AS = &#39;pages/{slug}/index.html&#39;</span>
-<span class="err">CATEGORY_URL = &#39;category/{slug}&#39;</span>
-<span class="err">CATEGORY_SAVE_AS = &#39;category/{slug}/index.html&#39;</span>
-<span class="err">TAG_URL = &#39;tag/{slug}&#39;</span>
-<span class="err">TAG_SAVE_AS = &#39;tag/{slug}/index.html&#39;</span>
-</pre></div>
-
-
-<p>generate ulang website dengan menggunakan perintah</p>
-<div class="highlight"><pre><span></span><span class="err">pelican content</span>
-<span class="err">pelican --listen</span>
-</pre></div>
-
-
+<h2>Konfigurasi custom domain di github</h2>
+<p>Masuk ke repository github <code>yourusername.github.io</code> kemudian pilih <strong>Settings</strong>.
+<p align="center">
+  <img src="https://i.imgur.com/SbIVUxJ.png" alt="https://i.imgur.com/SbIVUxJ.png">
+</p></p>
+<p>Kemudian scroll ke bawah sampai menemukan Kolom Github Pages. Pada isian <strong>Custom Domain</strong> silahkan isi domain yang telah dibeli tadi dan klik save
+<p align="center">
+  <img src="https://i.imgur.com/Pjkk8rd.png" alt="https://i.imgur.com/Pjkk8rd.png">
+</p></p>
+<p>Tunggu proses peralihan DNS agar domain aktif bisa diakses kira-kira maksimal 1x24 jam.</p>
 <h2>Selanjutnya</h2>
-<p>Pada artikel ini kita belajar bagaimana cara membuat konten dengan menggunakan markdown. Tutorial selanjutnya adalah bagaimana cara <a href="https://tegardp.github.io/articles/2020/05/26/membuat-blog-menggunakan-pelican-dan-python-3/">Meluncurkan di Github Pages</a></p>
+<p>Pada artikel ini kamu telah berhasil membuat custom domain menggunakan Github Pages dan niagahoster. Tutorial selanjutnya adalah bagaimana cara <a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-5.md">Menambahkan kolom komentar menggunakan Disqus</a></p>
 <h2>Series</h2>
 <p>Artikel ini adalah bagian dari seri tutorial bagaimana membuat blog menggunakan pelican dan Python</p>
 <p><a href="https://tegardp.github.io/articles/2020/05/17/membuat-blog-menggunakan-pelican-dan-python-1/">Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican</a>
@@ -293,8 +172,8 @@
                 <a class="accordion-toggle disqus-comment-count comment-count"
                    data-toggle="collapse"
                    data-parent="#accordion2"
-                   data-disqus-identifier="https://tegardp.github.io/articles/2020/05/18/membuat-blog-menggunakan-pelican-dan-python-2/"
-                   href="https://tegardp.github.io/articles/2020/05/18/membuat-blog-menggunakan-pelican-dan-python-2/#comment_thread"
+                   data-disqus-identifier="https://tegardp.github.io/articles/2020/05/28/membuat-blog-menggunakan-pelican-dan-python-4/"
+                   href="https://tegardp.github.io/articles/2020/05/28/membuat-blog-menggunakan-pelican-dan-python-4/#comment_thread"
                    id="comment-accordion-toggle">
                     Comments
                 </a>
@@ -312,8 +191,8 @@
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
 
-    var disqus_identifier = 'https://tegardp.github.io/articles/2020/05/18/membuat-blog-menggunakan-pelican-dan-python-2/';
-    var disqus_url = 'https://tegardp.github.io/articles/2020/05/18/membuat-blog-menggunakan-pelican-dan-python-2/';
+    var disqus_identifier = 'https://tegardp.github.io/articles/2020/05/28/membuat-blog-menggunakan-pelican-dan-python-4/';
+    var disqus_url = 'https://tegardp.github.io/articles/2020/05/28/membuat-blog-menggunakan-pelican-dan-python-4/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -337,9 +216,7 @@
         </div>
         <section id="article-sidebar" class="span2">
             <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2020-05-18T06:10:00+09:00">May 18, 2020</time>
-<h4>Last Updated</h4>
-<time datetime="2020-05-22T20:04:00+09:00">May 22, 2020</time>
+            <time itemprop="dateCreated" datetime="2020-05-28T21:40:00+09:00">May 28, 2020</time>
 
             <h4>Category</h4>
             <a class="category-link" href="https://tegardp.github.io/categories.html#python-ref">python</a>
