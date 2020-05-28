@@ -11,17 +11,17 @@
 
 <meta name="keywords" content="python, pelican, python, " />
 
-<meta property="og:title" content="Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Niagahoster "/>
-<meta property="og:url" content="https://tegardp.github.io/articles/2020/05/28/membuat-blog-menggunakan-pelican-dan-python-4/" />
+<meta property="og:title" content="Membuat Blog Menggunakan Pelican dan Python Bagian 5 - Menambahkan kolom komentar menggunakan Disqus "/>
+<meta property="og:url" content="https://tegardp.github.io/articles/2020/05/29/membuat-blog-menggunakan-pelican-dan-python-5/" />
 <meta property="og:description" content="Panduan membuat blog statis menggunakan Pelican" />
 <meta property="og:site_name" content="Tegar Dani&#39;s Blog" />
 <meta property="og:article:author" content="tegardp" />
-<meta property="og:article:published_time" content="2020-05-28T21:40:00+09:00" />
-<meta property="og:article:modified_time" content="2020-05-28T21:40:00+09:00" />
-<meta name="twitter:title" content="Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Niagahoster ">
+<meta property="og:article:published_time" content="2020-05-29T07:35:00+09:00" />
+<meta property="og:article:modified_time" content="2020-05-29T07:35:00+09:00" />
+<meta name="twitter:title" content="Membuat Blog Menggunakan Pelican dan Python Bagian 5 - Menambahkan kolom komentar menggunakan Disqus ">
 <meta name="twitter:description" content="Panduan membuat blog statis menggunakan Pelican">
 
-        <title>Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Niagahoster  · Tegar Dani&#39;s Blog
+        <title>Membuat Blog Menggunakan Pelican dan Python Bagian 5 - Menambahkan kolom komentar menggunakan Disqus  · Tegar Dani&#39;s Blog
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://tegardp.github.io/theme/css/elegant.prod.css" media="screen">
@@ -75,8 +75,8 @@
 <div class="row-fluid">
     <header class="page-header span10 offset2">
         <h1>
-            <a href="https://tegardp.github.io/articles/2020/05/28/membuat-blog-menggunakan-pelican-dan-python-4/">
-                Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Niagahoster
+            <a href="https://tegardp.github.io/articles/2020/05/29/membuat-blog-menggunakan-pelican-dan-python-5/">
+                Membuat Blog Menggunakan Pelican dan Python Bagian 5 - Menambahkan kolom komentar menggunakan Disqus
             </a>
         </h1>
     </header>
@@ -87,60 +87,51 @@
             
             <h2>Prasyarat</h2>
 <ul>
-<li>Sudah melakukan langkah-langkah yang terdapat di <a href="filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-3.md">Tutorial sebelumnya</a></li>
-<li>Menyewa domain di Niagahoster</li>
+<li>Perlu mendaftar di disqus. Jangan khawatir. Gratis!</li>
 </ul>
 <h2>Goal</h2>
 <ul>
-<li>Agar <em>website</em> anda bisa di akses di <em>yourdomain.com</em> </li>
+<li>Menambahkan kolom komentar pada artikel</li>
 </ul>
-<h2>Sewa Domain</h2>
-<p>Aku sih tidak mengharuskan menyewa domain di niagahoster. Domain bisa disewa dimanapun seperti Google domain, hostgator dan lainnya. Tapi, di tutorial kali ini aku mau berbagi tutorial menyewa domain di niaga hoster dan mengonfigurasinya dengan Github Pages</p>
-<h2>Menyewa domain di Niagahoster</h2>
-<p>Silahkan kunjungi https://www.niagahoster.co.id/domain-murah untuk mengecek ketersediaan domain.</p>
+<h2>Menginstall Disqus</h2>
+<p>Setelah kamu mendaftar Disqus, silahkan <strong>create new site</strong>. Perlu diperhatikan URL Disqus akan digenerate dan dapat dilihat di catatan di bawah <strong>Website Name</strong> pada gambar di bawah. Catat bagian <strong>yourusername</strong>.disqus.com karena nanti akan ditambahkan ke konfigurasi pelican</p>
 <p align="center">
-  <img src="https://i.imgur.com/H6bOJEg.png" alt="https://i.imgur.com/H6bOJEg.png">
+  <img src="https://i.imgur.com/g8P2v4K.png" alt="https://i.imgur.com/g8P2v4K.png">
 </p>
 
-<p>Selanjutnya kamu tinggal mengikuti langkah seperti di gambar
+<p>Pilih <strong>basic plan</strong>, jangan khawatir, ini gratis. Nanti, kalau dibutuhkan kamu bisa mengupgradenya kok.</p>
 <p align="center">
-  <img src="https://i.imgur.com/YsCDx0h.png" alt="https://i.imgur.com/YsCDx0h.png">
-</p></p>
-<p>Disini aku menggunakan paket personal karena harganya lagi diskon banget. hehe
-<p align="center">
-  <img src="https://i.imgur.com/d03VixQ.png" alt="https://i.imgur.com/d03VixQ.png">
-</p>
-<p align="center">
-  <img src="https://i.imgur.com/Ma8QSp7.png" alt="https://i.imgur.com/Ma8QSp7.png">
-</p></p>
-<p>Setelah kamu berhasil menyewa domain langkah selanjutnya adalah mendaftarkan ip address github ke domain kamu dengan menambahkan custom record. Caranya adalah pada sidebar di samping pilih <strong>Layanan Anda &gt; Domain</strong>. Kemudian, pilih domain yang tadi disewa dan pilih <strong>kelola domain</strong>. Lalu pilih tab <strong>DNS Management</strong>. Kemudian pilih <strong>Add new Record</strong></p>
-<ul>
-<li>A Record = 185.199.108.153</li>
-<li>A Record = 185.199.109.153</li>
-<li>A Record = 185.199.110.153</li>
-<li>A Record = 185.199.111.153</li>
-<li>CNAME = yourusername.github.io</li>
-</ul>
-<p align="center">
-  <img src="https://i.imgur.com/4b9XHKW.png" alt="https://i.imgur.com/4b9XHKW.png">
+  <img src="https://matthewdevaney.com/img/disqus_tutorial_2.png" alt="https://matthewdevaney.com/img/disqus_tutorial_2.png">
 </p>
 
+<p>Pilih <strong>I don't see my platform liste, install manually with Universal Code</strong></p>
 <p align="center">
-  <img src="https://i.imgur.com/WTcFzGQ.png" alt="https://i.imgur.com/WTcFzGQ.png">
+  <img src="https://matthewdevaney.com/img/disqus_tutorial_3.png" alt="https://matthewdevaney.com/img/disqus_tutorial_3.png">
 </p>
 
-<h2>Konfigurasi custom domain di github</h2>
-<p>Masuk ke repository github <code>yourusername.github.io</code> kemudian pilih <strong>Settings</strong>.
+<p>Selanjutnya isi form konfigurasi disqus. Kamu bisa langsung pilih lanjut dan mengonfigurasinya nanti.</p>
 <p align="center">
-  <img src="https://i.imgur.com/SbIVUxJ.png" alt="https://i.imgur.com/SbIVUxJ.png">
-</p></p>
-<p>Kemudian scroll ke bawah sampai menemukan Kolom Github Pages. Pada isian <strong>Custom Domain</strong> silahkan isi domain yang telah dibeli tadi dan klik save
+  <img src="https://i.imgur.com/9eznDfN.png" alt="https://i.imgur.com/9eznDfN.png">
+</p>
+
+<p>Kolom komentar Disqus hanya akan muncul di website pelican kita. Buka file <code>publishconf.py</code> dan isi variable DISQUS_SITENAME dengan url username disqus anda</p>
+<div class="highlight"><pre><span></span><span class="err">DISQUS_SITENAME = &#39;yourusername&#39;</span>
+</pre></div>
+
+
+<p>Setelah itu seperti biasa lakukan generate pelican</p>
+<div class="highlight"><pre><span></span><span class="err">pelican content -s publishconf.py</span>
+<span class="err">pelican --listen</span>
+</pre></div>
+
+
+<p>Setelah itu coba buka website kamu dan cek apakah kolom komentar sudah muncul di halaman paling bawah</p>
 <p align="center">
-  <img src="https://i.imgur.com/Pjkk8rd.png" alt="https://i.imgur.com/Pjkk8rd.png">
-</p></p>
-<p>Tunggu proses peralihan DNS agar domain aktif bisa diakses kira-kira maksimal 1x24 jam.</p>
+  <img src="https://i.imgur.com/BO0jnru.png" alt="https://i.imgur.com/BO0jnru.png">
+</p>
+
 <h2>Selanjutnya</h2>
-<p>Pada artikel ini kamu telah berhasil membuat custom domain menggunakan Github Pages dan niagahoster. Tutorial selanjutnya adalah bagaimana cara <a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-5.md">Menambahkan kolom komentar menggunakan Disqus</a></p>
+<p>Pada artikel ini kamu telah berhasil menambahkan kolom komentar menggunakan Disqus. Tutorial selanjutnya adalah bagaimana cara <a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-6.md">Melihat trafik menggunakan Google Analytics</a></p>
 <h2>Series</h2>
 <p>Artikel ini adalah bagian dari seri tutorial bagaimana membuat blog menggunakan pelican dan Python</p>
 <p><a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-1.md">Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican</a>
@@ -172,8 +163,8 @@
                 <a class="accordion-toggle disqus-comment-count comment-count"
                    data-toggle="collapse"
                    data-parent="#accordion2"
-                   data-disqus-identifier="https://tegardp.github.io/articles/2020/05/28/membuat-blog-menggunakan-pelican-dan-python-4/"
-                   href="https://tegardp.github.io/articles/2020/05/28/membuat-blog-menggunakan-pelican-dan-python-4/#comment_thread"
+                   data-disqus-identifier="https://tegardp.github.io/articles/2020/05/29/membuat-blog-menggunakan-pelican-dan-python-5/"
+                   href="https://tegardp.github.io/articles/2020/05/29/membuat-blog-menggunakan-pelican-dan-python-5/#comment_thread"
                    id="comment-accordion-toggle">
                     Comments
                 </a>
@@ -191,8 +182,8 @@
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
 
-    var disqus_identifier = 'https://tegardp.github.io/articles/2020/05/28/membuat-blog-menggunakan-pelican-dan-python-4/';
-    var disqus_url = 'https://tegardp.github.io/articles/2020/05/28/membuat-blog-menggunakan-pelican-dan-python-4/';
+    var disqus_identifier = 'https://tegardp.github.io/articles/2020/05/29/membuat-blog-menggunakan-pelican-dan-python-5/';
+    var disqus_url = 'https://tegardp.github.io/articles/2020/05/29/membuat-blog-menggunakan-pelican-dan-python-5/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -216,7 +207,7 @@
         </div>
         <section id="article-sidebar" class="span2">
             <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2020-05-28T21:40:00+09:00">May 28, 2020</time>
+            <time itemprop="dateCreated" datetime="2020-05-29T07:35:00+09:00">May 29, 2020</time>
 
             <h4>Category</h4>
             <a class="category-link" href="https://tegardp.github.io/categories.html#python-ref">python</a>
