@@ -1,5 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tegar Dani's Blog</title><link href="https://tegardp.github.io/" rel="alternate"></link><link href="https://tegardp.github.io/feeds/all.atom.xml" rel="self"></link><id>https://tegardp.github.io/</id><updated>2020-05-28T21:40:00+09:00</updated><entry><title>Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Niagahoster</title><link href="https://tegardp.github.io/articles/2020/05/28/membuat-blog-menggunakan-pelican-dan-python-4/" rel="alternate"></link><published>2020-05-28T21:40:00+09:00</published><updated>2020-05-28T21:40:00+09:00</updated><author><name>tegardp</name></author><id>tag:tegardp.github.io,2020-05-28:/articles/2020/05/28/membuat-blog-menggunakan-pelican-dan-python-4/</id><summary type="html">&lt;p&gt;Panduan membuat blog statis menggunakan Pelican&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Prasyarat&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tegar Dani's Blog</title><link href="https://tegardp.github.io/" rel="alternate"></link><link href="https://tegardp.github.io/feeds/all.atom.xml" rel="self"></link><id>https://tegardp.github.io/</id><updated>2020-05-29T07:35:00+09:00</updated><entry><title>Membuat Blog Menggunakan Pelican dan Python Bagian 5 - Menambahkan kolom komentar menggunakan Disqus</title><link href="https://tegardp.github.io/articles/2020/05/29/membuat-blog-menggunakan-pelican-dan-python-5/" rel="alternate"></link><published>2020-05-29T07:35:00+09:00</published><updated>2020-05-29T07:35:00+09:00</updated><author><name>tegardp</name></author><id>tag:tegardp.github.io,2020-05-29:/articles/2020/05/29/membuat-blog-menggunakan-pelican-dan-python-5/</id><summary type="html">&lt;p&gt;Panduan membuat blog statis menggunakan Pelican&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Prasyarat&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Perlu mendaftar di disqus. Jangan khawatir. Gratis!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Goal&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Menambahkan kolom komentar pada artikel&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Menginstall Disqus&lt;/h2&gt;
+&lt;p&gt;Setelah kamu mendaftar Disqus, silahkan &lt;strong&gt;create new site&lt;/strong&gt;. Perlu diperhatikan URL Disqus akan digenerate dan dapat dilihat di catatan di bawah &lt;strong&gt;Website Name&lt;/strong&gt; pada gambar di bawah. Catat bagian &lt;strong&gt;yourusername&lt;/strong&gt;.disqus.com karena nanti akan ditambahkan ke konfigurasi pelican&lt;/p&gt;
+&lt;p align="center"&gt;
+  &lt;img src="https://i.imgur.com/g8P2v4K.png" alt="https://i.imgur.com/g8P2v4K.png"&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Pilih &lt;strong&gt;basic plan&lt;/strong&gt;, jangan khawatir, ini gratis. Nanti, kalau dibutuhkan kamu bisa mengupgradenya kok.&lt;/p&gt;
+&lt;p align="center"&gt;
+  &lt;img src="https://matthewdevaney.com/img/disqus_tutorial_2.png" alt="https://matthewdevaney.com/img/disqus_tutorial_2.png"&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Pilih &lt;strong&gt;I don't see my platform liste, install manually with Universal Code&lt;/strong&gt;&lt;/p&gt;
+&lt;p align="center"&gt;
+  &lt;img src="https://matthewdevaney.com/img/disqus_tutorial_3.png" alt="https://matthewdevaney.com/img/disqus_tutorial_3.png"&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya isi form konfigurasi disqus. Kamu bisa langsung pilih lanjut dan mengonfigurasinya nanti.&lt;/p&gt;
+&lt;p align="center"&gt;
+  &lt;img src="https://i.imgur.com/9eznDfN.png" alt="https://i.imgur.com/9eznDfN.png"&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Kolom komentar Disqus hanya akan muncul di website pelican kita. Buka file &lt;code&gt;publishconf.py&lt;/code&gt; dan isi variable DISQUS_SITENAME dengan url username disqus anda&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;DISQUS_SITENAME = &amp;#39;yourusername&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Setelah itu seperti biasa lakukan generate pelican&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;pelican content -s publishconf.py&lt;/span&gt;
+&lt;span class="err"&gt;pelican --listen&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Setelah itu coba buka website kamu dan cek apakah kolom komentar sudah muncul di halaman paling bawah&lt;/p&gt;
+&lt;p align="center"&gt;
+  &lt;img src="https://i.imgur.com/BO0jnru.png" alt="https://i.imgur.com/BO0jnru.png"&gt;
+&lt;/p&gt;
+
+&lt;h2&gt;Selanjutnya&lt;/h2&gt;
+&lt;p&gt;Pada artikel ini kamu telah berhasil menambahkan kolom komentar menggunakan Disqus. Tutorial selanjutnya adalah bagaimana cara &lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-6.md"&gt;Melihat trafik menggunakan Google Analytics&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Series&lt;/h2&gt;
+&lt;p&gt;Artikel ini adalah bagian dari seri tutorial bagaimana membuat blog menggunakan pelican dan Python&lt;/p&gt;
+&lt;p&gt;&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-1.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican&lt;/a&gt;
+&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-2.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat Konten&lt;/a&gt;
+&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-3.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages&lt;/a&gt;
+&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-4"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Niagahoster&lt;/a&gt;
+&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-5.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 5 - Menambahkan kolom komentar menggunakan Disqus&lt;/a&gt;
+&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-6.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 6 - Melihat trafik menggunakan Google Analytics&lt;/a&gt;&lt;/p&gt;</content><category term="python"></category><category term="python"></category><category term="pelican"></category></entry><entry><title>Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Niagahoster</title><link href="https://tegardp.github.io/articles/2020/05/28/membuat-blog-menggunakan-pelican-dan-python-4/" rel="alternate"></link><published>2020-05-28T21:40:00+09:00</published><updated>2020-05-28T21:40:00+09:00</updated><author><name>tegardp</name></author><id>tag:tegardp.github.io,2020-05-28:/articles/2020/05/28/membuat-blog-menggunakan-pelican-dan-python-4/</id><summary type="html">&lt;p&gt;Panduan membuat blog statis menggunakan Pelican&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Prasyarat&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Sudah melakukan langkah-langkah yang terdapat di &lt;a href="filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-3.md"&gt;Tutorial sebelumnya&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Menyewa domain di Niagahoster&lt;/li&gt;
@@ -57,9 +111,9 @@
 &lt;p&gt;Pada artikel ini kamu telah berhasil membuat custom domain menggunakan Github Pages dan niagahoster. Tutorial selanjutnya adalah bagaimana cara &lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-5.md"&gt;Menambahkan kolom komentar menggunakan Disqus&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Series&lt;/h2&gt;
 &lt;p&gt;Artikel ini adalah bagian dari seri tutorial bagaimana membuat blog menggunakan pelican dan Python&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://tegardp.github.io/articles/2020/05/17/membuat-blog-menggunakan-pelican-dan-python-1/"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican&lt;/a&gt;
-&lt;a href="https://tegardp.github.io/articles/2020/05/18/membuat-blog-menggunakan-pelican-dan-python-2/"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat Konten&lt;/a&gt;
-&lt;a href="https://tegardp.github.io/articles/2020/05/26/membuat-blog-menggunakan-pelican-dan-python-3/"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages&lt;/a&gt;
+&lt;p&gt;&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-1.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican&lt;/a&gt;
+&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-2.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat Konten&lt;/a&gt;
+&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-3.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages&lt;/a&gt;
 &lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-4"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Niagahoster&lt;/a&gt;
 &lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-5.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 5 - Menambahkan kolom komentar menggunakan Disqus&lt;/a&gt;
 &lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-6.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 6 - Melihat trafik menggunakan Google Analytics&lt;/a&gt;&lt;/p&gt;</content><category term="python"></category><category term="python"></category><category term="pelican"></category></entry><entry><title>Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages</title><link href="https://tegardp.github.io/articles/2020/05/26/membuat-blog-menggunakan-pelican-dan-python-3/" rel="alternate"></link><published>2020-05-26T03:35:00+09:00</published><updated>2020-05-26T03:35:00+09:00</updated><author><name>tegardp</name></author><id>tag:tegardp.github.io,2020-05-26:/articles/2020/05/26/membuat-blog-menggunakan-pelican-dan-python-3/</id><summary type="html">&lt;p&gt;Panduan membuat blog statis menggunakan Pelican&lt;/p&gt;</summary><content type="html">&lt;p&gt;Setelah kamu berhasil membuat web statis. Kamu pasti ingin meluncurkannya supaya dapat dibaca oleh semua orang.&lt;/p&gt;
@@ -117,9 +171,9 @@
 &lt;p&gt;Tutorial selanjutnya adalah bagaimana cara &lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-4"&gt;Custom domain menggunakan Github Pages dan Niagahoster&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Series&lt;/h2&gt;
 &lt;p&gt;Artikel ini adalah bagian dari seri tutorial bagaimana membuat blog menggunakan pelican dan Python&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://tegardp.github.io/articles/2020/05/17/membuat-blog-menggunakan-pelican-dan-python-1/"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican&lt;/a&gt;
-&lt;a href="https://tegardp.github.io/articles/2020/05/18/membuat-blog-menggunakan-pelican-dan-python-2/"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat Konten&lt;/a&gt;
-&lt;a href="https://tegardp.github.io/articles/2020/05/26/membuat-blog-menggunakan-pelican-dan-python-3/"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages&lt;/a&gt;
+&lt;p&gt;&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-1.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican&lt;/a&gt;
+&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-2.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat Konten&lt;/a&gt;
+&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-3.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages&lt;/a&gt;
 &lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-4"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Niagahoster&lt;/a&gt;
 &lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-5.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 5 - Menambahkan kolom komentar menggunakan Disqus&lt;/a&gt;
 &lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-6.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 6 - Melihat trafik menggunakan Google Analytics&lt;/a&gt;&lt;/p&gt;</content><category term="python"></category><category term="python"></category><category term="pelican"></category></entry><entry><title>Hey Jo, Bagus banget desainmu? Pake Ipad Pro ya?</title><link href="https://tegardp.github.io/articles/2020/05/25/hey-jo-bagus-banget-desainmu-pake-ipad-pro-ya/" rel="alternate"></link><published>2020-05-25T09:30:00+09:00</published><updated>2020-05-25T09:30:00+09:00</updated><author><name>tegardp</name></author><id>tag:tegardp.github.io,2020-05-25:/articles/2020/05/25/hey-jo-bagus-banget-desainmu-pake-ipad-pro-ya/</id><summary type="html">&lt;p align="center"&gt;
@@ -187,7 +241,7 @@ Mencoret tugas apa saja yang telah dilakukan, menjadi penyemangat sendiri untuk 
 &lt;p&gt;Setelah kamu rajin menulis jurnal, dan menyimpannya dengan baik. Di hari tua esok kamu dapat melihat kembali masa lalu, kegiatan yang lalu, mood yang dirasakan, dan juga betapa buruknya tulisanmu dulu, kamu bisa tersipu malu sendiri membacanya. Hehe
 Selain itu, anak cucu dan keturunanmu juga bisa membaca perjalanan hidup kamu!&lt;/p&gt;</content><category term="lifestyle"></category><category term="bullet journal"></category></entry><entry><title>Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat konten</title><link href="https://tegardp.github.io/articles/2020/05/18/membuat-blog-menggunakan-pelican-dan-python-2/" rel="alternate"></link><published>2020-05-18T06:10:00+09:00</published><updated>2020-05-22T20:04:00+09:00</updated><author><name>tegardp</name></author><id>tag:tegardp.github.io,2020-05-18:/articles/2020/05/18/membuat-blog-menggunakan-pelican-dan-python-2/</id><summary type="html">&lt;p&gt;Panduan membuat blog statis menggunakan Pelican&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Prasyarat&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Telah melakukan instalasi dan konfigurasi pelican seperti pada &lt;a href="https://tegardp.github.io/articles/2020/05/17/membuat-blog-menggunakan-pelican-dan-python-1/"&gt;Instalasi dan Tema Pelican&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Telah melakukan instalasi dan konfigurasi pelican seperti pada &lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-1.md"&gt;Instalasi dan Tema Pelican&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Goal&lt;/h2&gt;
 &lt;ul&gt;
@@ -361,12 +415,12 @@ Selain itu, anak cucu dan keturunanmu juga bisa membaca perjalanan hidup kamu!&l
 
 
 &lt;h2&gt;Selanjutnya&lt;/h2&gt;
-&lt;p&gt;Pada artikel ini kita belajar bagaimana cara membuat konten dengan menggunakan markdown. Tutorial selanjutnya adalah bagaimana cara &lt;a href="https://tegardp.github.io/articles/2020/05/26/membuat-blog-menggunakan-pelican-dan-python-3/"&gt;Meluncurkan di Github Pages&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Pada artikel ini kita belajar bagaimana cara membuat konten dengan menggunakan markdown. Tutorial selanjutnya adalah bagaimana cara &lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-3.md"&gt;Meluncurkan di Github Pages&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Series&lt;/h2&gt;
 &lt;p&gt;Artikel ini adalah bagian dari seri tutorial bagaimana membuat blog menggunakan pelican dan Python&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://tegardp.github.io/articles/2020/05/17/membuat-blog-menggunakan-pelican-dan-python-1/"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican&lt;/a&gt;
-&lt;a href="https://tegardp.github.io/articles/2020/05/18/membuat-blog-menggunakan-pelican-dan-python-2/"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat Konten&lt;/a&gt;
-&lt;a href="https://tegardp.github.io/articles/2020/05/26/membuat-blog-menggunakan-pelican-dan-python-3/"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages&lt;/a&gt;
+&lt;p&gt;&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-1.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican&lt;/a&gt;
+&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-2.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat Konten&lt;/a&gt;
+&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-3.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages&lt;/a&gt;
 &lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-4"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Niagahoster&lt;/a&gt;
 &lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-5.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 5 - Menambahkan kolom komentar menggunakan Disqus&lt;/a&gt;
 &lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-6.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 6 - Melihat trafik menggunakan Google Analytics&lt;/a&gt;&lt;/p&gt;</content><category term="python"></category><category term="python"></category><category term="pelican"></category></entry><entry><title>Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican</title><link href="https://tegardp.github.io/articles/2020/05/17/membuat-blog-menggunakan-pelican-dan-python-1/" rel="alternate"></link><published>2020-05-17T16:10:00+09:00</published><updated>2020-05-22T20:08:00+09:00</updated><author><name>tegardp</name></author><id>tag:tegardp.github.io,2020-05-17:/articles/2020/05/17/membuat-blog-menggunakan-pelican-dan-python-1/</id><summary type="html">&lt;p&gt;Panduan membuat blog statis menggunakan Pelican&lt;/p&gt;</summary><content type="html">&lt;p&gt;Membuat web statis sendiri memiliki keunggulan dibandingkan tradisional web yang menggunakan database untuk menyimpan konten.&lt;/p&gt;
@@ -541,9 +595,9 @@ Pada tutorial kali ini aku menggunakan tema &lt;code&gt;elegant&lt;/code&gt; yan
 &lt;p&gt;Pada artikel ini kita belajar bagaimana cara menginstall pelican dan generate static site serta menambahkan tema elegant. Tutorial selanjutnya adalah bagaimana cara &lt;a href="filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-2.md"&gt;membuat konten&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Series&lt;/h2&gt;
 &lt;p&gt;Artikel ini adalah bagian dari seri tutorial bagaimana membuat blog menggunakan pelican dan Python&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://tegardp.github.io/articles/2020/05/17/membuat-blog-menggunakan-pelican-dan-python-1/"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican&lt;/a&gt;
-&lt;a href="https://tegardp.github.io/articles/2020/05/18/membuat-blog-menggunakan-pelican-dan-python-2/"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat Konten&lt;/a&gt;
-&lt;a href="https://tegardp.github.io/articles/2020/05/26/membuat-blog-menggunakan-pelican-dan-python-3/"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages&lt;/a&gt;
+&lt;p&gt;&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-1.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican&lt;/a&gt;
+&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-2.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat Konten&lt;/a&gt;
+&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-3.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages&lt;/a&gt;
 &lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-4"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Niagahoster&lt;/a&gt;
 &lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-5.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 5 - Menambahkan kolom komentar menggunakan Disqus&lt;/a&gt;
 &lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-6.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 6 - Melihat trafik menggunakan Google Analytics&lt;/a&gt;&lt;/p&gt;</content><category term="python"></category><category term="python"></category><category term="pelican"></category></entry><entry><title>Perjalanan Menuju Kebebasan Financial PNS (Financial Independence)</title><link href="https://tegardp.github.io/articles/2020/05/16/perjalanan-menuju-kebebasan-financial-pns/" rel="alternate"></link><published>2020-05-16T17:38:00+09:00</published><updated>2020-05-16T17:38:00+09:00</updated><author><name>tegardp</name></author><id>tag:tegardp.github.io,2020-05-16:/articles/2020/05/16/perjalanan-menuju-kebebasan-financial-pns/</id><summary type="html">&lt;p&gt;Perjalanan menuju kebebasan financial memang banyak lika-liku, butuh perjuangan besar. Di artikel ini saya akan membahas kiat-kiat menuju kebebasan finansial.&lt;/p&gt;</summary><content type="html">&lt;p align="center"&gt;

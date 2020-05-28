@@ -3,18 +3,19 @@ Date: 2020-5-18 06:10
 Modified: 2020-5-22 20:04
 Category: python
 Tags: python, pelican 
-Slug: membuat-blog-menggunakan-pelican-dan-python-5
+Slug: membuat-blog-menggunakan-pelican-dan-python-6
 Authors: tegardp
 Summary: Panduan membuat blog statis menggunakan Pelican
 
+Untuk mengenal lebih baik tentang pengunjung website kamu. Maka, kamu perlu memiliki **web analytics service**. [Google Analytics](https://analytics.google.com/analytics/web/) adalah salah satu web analytics service yang paling banyak digunakan.
+
+Pada tutorial kali ini aku mau berbagi cara mengimplementasikan Google Analyitics ke Web pelican kamu!.
+
 ## Prasyarat
-* Perlu mendaftar di disqus. Jangan khawatir. Gratis!
+* Sudah mendaftar di Google Account dan mengaktifkan Google Analytics
+
 ## Goal
-- Menambahkan kolom komentar pada artikel
-
-
-## Selanjutnya
-Pada artikel ini kamu telah berhasil menambahkan kolom komentar menggunakan Disqus. Tutorial selanjutnya adalah bagaimana cara [Melihat trafik menggunakan Google Analytics]({filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-5.md)
+- Mengimplementasikan Google Analyitics pada semua halaman website
 
 ## Series
 Artikel ini adalah bagian dari seri tutorial bagaimana membuat blog menggunakan pelican dan Python
