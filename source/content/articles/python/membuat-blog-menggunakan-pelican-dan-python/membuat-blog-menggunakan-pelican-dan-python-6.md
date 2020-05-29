@@ -1,6 +1,6 @@
-Title: Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Menambahkan kolom komentar menggunakan Disqus
-Date: 2020-5-18 06:10
-Modified: 2020-5-22 20:04
+Title: Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Melihat trafik menggunakan Google Analytics
+Date: 2020-5-18 04:55
+Modified: 2020-5-18 04:55
 Category: python
 Tags: python, pelican 
 Slug: membuat-blog-menggunakan-pelican-dan-python-6
@@ -17,8 +17,42 @@ Pada tutorial kali ini aku mau berbagi cara mengimplementasikan Google Analyitic
 ## Goal
 - Mengimplementasikan Google Analyitics pada semua halaman website
 
-## Series
-Artikel ini adalah bagian dari seri tutorial bagaimana membuat blog menggunakan pelican dan Python
+## Memasang Google Analytics
+Sign in ke Google Analytics dan klik ikon gear untuk membuka menu pengaturan. Klik tombol **Create Property**
+
+<p align="center">
+  <img src="https://i.imgur.com/EKLuZT6.png" alt="https://i.imgur.com/EKLuZT6.png">
+</p>
+
+Isi dan lengkapi form yang diperlukan. Pastika URL yang dimasukkan sama dengan domain yang digunakan untuk mengakses blog kita. Setelah itu klik buat.
+
+<p align="center">
+  <img src="https://i.imgur.com/uum1WDq.png" alt="https://i.imgur.com/uum1WDq.png">
+</p>
+
+Pada setelan properti kamu dapat melihat ID Pelacakan. Kita akan memberitahukannya ke pelican
+
+<p align="center">
+  <img src="https://i.imgur.com/CVipi0l.png" alt="https://i.imgur.com/CVipi0l.png">
+</p>
+
+Google Analytics hanya akan bekerja pada pelican yang telah di publikasikan. Oleh karena itu, edit file ```publishconf.py``` kemudian isi ID pelacakan sesuai dengan yang telah didapatkan tadi.
+
+```
+GOOGLE_ANALYTICS = 'UA-xxxxxxxxxxxx'
+```
+
+Setelah itu seperti biasa lakukan generate pelican
+
+```
+pelican content -s publishconf.py
+pelican --listen
+```
+
+Setelah mengunggah website yang telah digenerate ke hosting. Google Analytics akan mulai bekerja melacak konten website kita.
+
+## Kesimpulan
+Jika kamu sudah mengikuti kita dari [awal]({filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-1.md). Berarti kita sudah berhasil menginstall pelican, mengunggahnya di github pages, dan menambah *3rd party service* untuk menambah fungsi tambahan. Terimakasih telah mengikuti kami dari awal.
 
 [Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican]({filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-1.md)
 [Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat Konten]({filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-2.md)
