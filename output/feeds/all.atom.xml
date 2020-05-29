@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tegar Dani's Blog</title><link href="https://tegardp.github.io/" rel="alternate"></link><link href="https://tegardp.github.io/feeds/all.atom.xml" rel="self"></link><id>https://tegardp.github.io/</id><updated>2020-05-29T07:35:00+09:00</updated><entry><title>Membuat Blog Menggunakan Pelican dan Python Bagian 5 - Menambahkan kolom komentar menggunakan Disqus</title><link href="https://tegardp.github.io/articles/2020/05/29/membuat-blog-menggunakan-pelican-dan-python-5/" rel="alternate"></link><published>2020-05-29T07:35:00+09:00</published><updated>2020-05-29T07:35:00+09:00</updated><author><name>tegardp</name></author><id>tag:tegardp.github.io,2020-05-29:/articles/2020/05/29/membuat-blog-menggunakan-pelican-dan-python-5/</id><summary type="html">&lt;p&gt;Panduan membuat blog statis menggunakan Pelican&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Prasyarat&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tegar Dani's Blog</title><link href="https://tegardp.github.io/" rel="alternate"></link><link href="https://tegardp.github.io/feeds/all.atom.xml" rel="self"></link><id>https://tegardp.github.io/</id><updated>2020-05-30T04:55:00+09:00</updated><entry><title>Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Melihat trafik menggunakan Google Analytics</title><link href="https://tegardp.github.io/articles/2020/05/30/membuat-blog-menggunakan-pelican-dan-python-6/" rel="alternate"></link><published>2020-05-30T04:55:00+09:00</published><updated>2020-05-30T04:55:00+09:00</updated><author><name>tegardp</name></author><id>tag:tegardp.github.io,2020-05-30:/articles/2020/05/30/membuat-blog-menggunakan-pelican-dan-python-6/</id><summary type="html">&lt;p&gt;Panduan membuat blog statis menggunakan Pelican&lt;/p&gt;</summary><content type="html">&lt;p&gt;Untuk mengenal lebih baik tentang pengunjung website kamu. Maka, kamu perlu memiliki &lt;strong&gt;web analytics service&lt;/strong&gt;. &lt;a href="https://analytics.google.com/analytics/web/"&gt;Google Analytics&lt;/a&gt; adalah salah satu web analytics service yang paling banyak digunakan.&lt;/p&gt;
+&lt;p&gt;Pada tutorial kali ini aku mau berbagi cara mengimplementasikan Google Analyitics ke Web pelican kamu!.&lt;/p&gt;
+&lt;h2&gt;Prasyarat&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Sudah mendaftar di Google Account dan mengaktifkan Google Analytics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Goal&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Mengimplementasikan Google Analyitics pada semua halaman website&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Memasang Google Analytics&lt;/h2&gt;
+&lt;p&gt;Sign in ke Google Analytics dan klik ikon gear untuk membuka menu pengaturan. Klik tombol &lt;strong&gt;Create Property&lt;/strong&gt;&lt;/p&gt;
+&lt;p align="center"&gt;
+  &lt;img src="https://i.imgur.com/EKLuZT6.png" alt="https://i.imgur.com/EKLuZT6.png"&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Isi dan lengkapi form yang diperlukan. Pastika URL yang dimasukkan sama dengan domain yang digunakan untuk mengakses blog kita. Setelah itu klik buat.&lt;/p&gt;
+&lt;p align="center"&gt;
+  &lt;img src="https://i.imgur.com/uum1WDq.png" alt="https://i.imgur.com/uum1WDq.png"&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Pada setelan properti kamu dapat melihat ID Pelacakan. Kita akan memberitahukannya ke pelican&lt;/p&gt;
+&lt;p align="center"&gt;
+  &lt;img src="https://i.imgur.com/CVipi0l.png" alt="https://i.imgur.com/CVipi0l.png"&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Google Analytics hanya akan bekerja pada pelican yang telah di publikasikan. Oleh karena itu, edit file &lt;code&gt;publishconf.py&lt;/code&gt; kemudian isi ID pelacakan sesuai dengan yang telah didapatkan tadi.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;GOOGLE_ANALYTICS = &amp;#39;UA-xxxxxxxxxxxx&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Setelah itu seperti biasa lakukan generate pelican&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;pelican content -s publishconf.py&lt;/span&gt;
+&lt;span class="err"&gt;pelican --listen&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Setelah mengunggah website yang telah digenerate ke hosting. Google Analytics akan mulai bekerja melacak konten website kita.&lt;/p&gt;
+&lt;h2&gt;Kesimpulan&lt;/h2&gt;
+&lt;p&gt;Jika kamu sudah mengikuti kita dari &lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-1.md"&gt;awal&lt;/a&gt;. Berarti kita sudah berhasil menginstall pelican, mengunggahnya di github pages, dan menambah &lt;em&gt;3rd party service&lt;/em&gt; untuk menambah fungsi tambahan. Terimakasih telah mengikuti kami dari awal.&lt;/p&gt;
+&lt;p&gt;&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-1.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican&lt;/a&gt;
+&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-2.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat Konten&lt;/a&gt;
+&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-3.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages&lt;/a&gt;
+&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-4"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Niagahoster&lt;/a&gt;
+&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-5.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 5 - Menambahkan kolom komentar menggunakan Disqus&lt;/a&gt;
+&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-6.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 6 - Melihat trafik menggunakan Google Analytics&lt;/a&gt;&lt;/p&gt;</content><category term="python"></category><category term="python"></category><category term="pelican"></category></entry><entry><title>Membuat Blog Menggunakan Pelican dan Python Bagian 5 - Menambahkan kolom komentar menggunakan Disqus</title><link href="https://tegardp.github.io/articles/2020/05/29/membuat-blog-menggunakan-pelican-dan-python-5/" rel="alternate"></link><published>2020-05-29T07:35:00+09:00</published><updated>2020-05-29T07:35:00+09:00</updated><author><name>tegardp</name></author><id>tag:tegardp.github.io,2020-05-29:/articles/2020/05/29/membuat-blog-menggunakan-pelican-dan-python-5/</id><summary type="html">&lt;p&gt;Panduan membuat blog statis menggunakan Pelican&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Prasyarat&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Perlu mendaftar di disqus. Jangan khawatir. Gratis!&lt;/li&gt;
 &lt;/ul&gt;
@@ -418,51 +463,6 @@ Selain itu, anak cucu dan keturunanmu juga bisa membaca perjalanan hidup kamu!&l
 &lt;p&gt;Pada artikel ini kita belajar bagaimana cara membuat konten dengan menggunakan markdown. Tutorial selanjutnya adalah bagaimana cara &lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-3.md"&gt;Meluncurkan di Github Pages&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Series&lt;/h2&gt;
 &lt;p&gt;Artikel ini adalah bagian dari seri tutorial bagaimana membuat blog menggunakan pelican dan Python&lt;/p&gt;
-&lt;p&gt;&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-1.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican&lt;/a&gt;
-&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-2.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat Konten&lt;/a&gt;
-&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-3.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages&lt;/a&gt;
-&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-4"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Custom domain menggunakan Github Pages dan Niagahoster&lt;/a&gt;
-&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-5.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 5 - Menambahkan kolom komentar menggunakan Disqus&lt;/a&gt;
-&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-6.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 6 - Melihat trafik menggunakan Google Analytics&lt;/a&gt;&lt;/p&gt;</content><category term="python"></category><category term="python"></category><category term="pelican"></category></entry><entry><title>Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Melihat trafik menggunakan Google Analytics</title><link href="https://tegardp.github.io/articles/2020/05/18/membuat-blog-menggunakan-pelican-dan-python-6/" rel="alternate"></link><published>2020-05-18T04:55:00+09:00</published><updated>2020-05-18T04:55:00+09:00</updated><author><name>tegardp</name></author><id>tag:tegardp.github.io,2020-05-18:/articles/2020/05/18/membuat-blog-menggunakan-pelican-dan-python-6/</id><summary type="html">&lt;p&gt;Panduan membuat blog statis menggunakan Pelican&lt;/p&gt;</summary><content type="html">&lt;p&gt;Untuk mengenal lebih baik tentang pengunjung website kamu. Maka, kamu perlu memiliki &lt;strong&gt;web analytics service&lt;/strong&gt;. &lt;a href="https://analytics.google.com/analytics/web/"&gt;Google Analytics&lt;/a&gt; adalah salah satu web analytics service yang paling banyak digunakan.&lt;/p&gt;
-&lt;p&gt;Pada tutorial kali ini aku mau berbagi cara mengimplementasikan Google Analyitics ke Web pelican kamu!.&lt;/p&gt;
-&lt;h2&gt;Prasyarat&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Sudah mendaftar di Google Account dan mengaktifkan Google Analytics&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Goal&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Mengimplementasikan Google Analyitics pada semua halaman website&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Memasang Google Analytics&lt;/h2&gt;
-&lt;p&gt;Sign in ke Google Analytics dan klik ikon gear untuk membuka menu pengaturan. Klik tombol &lt;strong&gt;Create Property&lt;/strong&gt;&lt;/p&gt;
-&lt;p align="center"&gt;
-  &lt;img src="https://i.imgur.com/EKLuZT6.png" alt="https://i.imgur.com/EKLuZT6.png"&gt;
-&lt;/p&gt;
-
-&lt;p&gt;Isi dan lengkapi form yang diperlukan. Pastika URL yang dimasukkan sama dengan domain yang digunakan untuk mengakses blog kita. Setelah itu klik buat.&lt;/p&gt;
-&lt;p align="center"&gt;
-  &lt;img src="https://i.imgur.com/uum1WDq.png" alt="https://i.imgur.com/uum1WDq.png"&gt;
-&lt;/p&gt;
-
-&lt;p&gt;Pada setelan properti kamu dapat melihat ID Pelacakan. Kita akan memberitahukannya ke pelican&lt;/p&gt;
-&lt;p align="center"&gt;
-  &lt;img src="https://i.imgur.com/CVipi0l.png" alt="https://i.imgur.com/CVipi0l.png"&gt;
-&lt;/p&gt;
-
-&lt;p&gt;Google Analytics hanya akan bekerja pada pelican yang telah di publikasikan. Oleh karena itu, edit file &lt;code&gt;publishconf.py&lt;/code&gt; kemudian isi ID pelacakan sesuai dengan yang telah didapatkan tadi.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;GOOGLE_ANALYTICS = &amp;#39;UA-xxxxxxxxxxxx&amp;#39;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Setelah itu seperti biasa lakukan generate pelican&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;pelican content -s publishconf.py&lt;/span&gt;
-&lt;span class="err"&gt;pelican --listen&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Setelah mengunggah website yang telah digenerate ke hosting. Google Analytics akan mulai bekerja melacak konten website kita.&lt;/p&gt;
-&lt;h2&gt;Kesimpulan&lt;/h2&gt;
-&lt;p&gt;Jika kamu sudah mengikuti kita dari &lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-1.md"&gt;awal&lt;/a&gt;. Berarti kita sudah berhasil menginstall pelican, mengunggahnya di github pages, dan menambah &lt;em&gt;3rd party service&lt;/em&gt; untuk menambah fungsi tambahan. Terimakasih telah mengikuti kami dari awal.&lt;/p&gt;
 &lt;p&gt;&lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-1.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 1 - Instalasi dan Tema Pelican&lt;/a&gt;
 &lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-2.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 2 - Membuat Konten&lt;/a&gt;
 &lt;a href="{filename}/articles/python/membuat-blog-menggunakan-pelican-dan-python-3.md"&gt;Membuat Blog Menggunakan Pelican dan Python Bagian 3 - Mengunggah di Github Pages&lt;/a&gt;
