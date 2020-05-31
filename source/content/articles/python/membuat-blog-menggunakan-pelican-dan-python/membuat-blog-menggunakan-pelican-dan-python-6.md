@@ -1,4 +1,4 @@
-Title: Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Melihat trafik menggunakan Google Analytics
+Title: Membuat Blog Menggunakan Pelican dan Python Bagian 6 - Melihat trafik menggunakan Google Analytics
 Date: 2020-5-30 04:55
 Modified: 2020-5-30 04:55
 Category: python

@@ -1,5 +1,5 @@
 git add .
-git commit -m "Membuat Blog Menggunakan Pelican dan Python Bagian 4 - Melihat trafik menggunakan Google Analytics"
+git commit -m "Kebiasaan-kebiasaan yang Membuat hidupku Menjadi lebih baik"
 git push -u origin dev
 ghp-import output -r origin -b master
 git push origin master
