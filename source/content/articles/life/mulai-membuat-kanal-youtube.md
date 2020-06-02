@@ -1,7 +1,7 @@
 Title: Mulai membuat kanal youtube
 Date: 2020-6-2 21:30
-Category: lifestyle
-Tags: life
+Category: blog
+Tags: blog
 Slug: mulai-membuat-kanal-youtube
 Authors: tegardp
 

@@ -1,7 +1,7 @@
 Title: Kebiasaan-kebiasaan yang Membuat hidupku Menjadi lebih baik
 Date: 2020-6-1 05:05
-Category: life
-Tags: life
+Category: blog
+Tags: blog
 Slug: kebiasaan-kebiasaan-yang-membuat-hidupku-lebih-baik
 Authors: tegardp
 

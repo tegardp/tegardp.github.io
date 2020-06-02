@@ -2,7 +2,7 @@ Title: Manfaat Journaling dan Kamu Harus Mencobanya
 Date: 2020-5-23 10:10
 Modified: 2020-5-23 10:10
 Category: lifestyle
-Tags: bullet journal
+Tags: bullet journal, lifestyle, protips
 Slug: manfaat-journaling-dan-kamu-harus-mencobanya
 Authors: tegardp
 
