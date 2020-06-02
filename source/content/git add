@@ -1,5 +1,5 @@
 git add .
-git commit -m "Kebiasaan-kebiasaan yang Membuat hidupku Menjadi lebih baik"
+git commit -m "Mulai membuat kanal youtube"
 git push -u origin dev
 ghp-import output -r origin -b master
 git push origin master
